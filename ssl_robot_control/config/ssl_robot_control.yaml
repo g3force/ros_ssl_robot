@@ -1,0 +1,41 @@
+ssl_robot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # velocity Controllers ---------------------------------------
+  wheel_fr_vel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: base_wheel_fr
+    pid: {p: 50.0, i: 0.0, d: 0.0}
+  wheel_fl_vel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: base_wheel_fl
+    pid: {p: 50.0, i: 0.0, d: 0.0}
+  wheel_rl_vel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: base_wheel_rl
+    pid: {p: 50.0, i: 0.0, d: 0.0}
+  wheel_rr_vel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: base_wheel_rr
+    pid: {p: 50.0, i: 0.0, d: 0.0}
+  
+  # Position Controllers ---------------------------------------
+  #~ wheel_fr_position_controller:
+    #~ type: effort_controllers/JointPositionController
+    #~ joint: base_wheel_fr
+    #~ pid: {p: 1.0, i: 0.0, d: 0.0}
+  #~ wheel_fl_position_controller:
+    #~ type: effort_controllers/JointPositionController
+    #~ joint: base_wheel_fl
+    #~ pid: {p: 1.0, i: 0.0, d: 0.0}
+  #~ wheel_rl_position_controller:
+    #~ type: effort_controllers/JointPositionController
+    #~ joint: base_wheel_rl
+    #~ pid: {p: 1.0, i: 0.0, d: 0.0}
+  #~ wheel_rr_position_controller:
+    #~ type: effort_controllers/JointPositionController
+    #~ joint: base_wheel_rr
+    #~ pid: {p: 1.0, i: 0.0, d: 0.0}

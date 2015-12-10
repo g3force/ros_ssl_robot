@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot>
+  
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/ssl_robot</robotNamespace>
+    </plugin>
+<!--
+    <static>true</static>
+-->
+    <mu1>0</mu1>
+    <mu2>0</mu2>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  
+  <gazebo reference="wheel_fl">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_fr">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_rl">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_rr">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+</robot>
