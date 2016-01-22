@@ -3,40 +3,46 @@
     <link name='base_link'>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose frame=''>0 0 0.1445 0 -0 0</pose>
+        <pose frame=''>0 0 0.09 0 -0 0</pose>
         <mass>2.5</mass>
         <inertia>
-          <ixx>0.008896</ixx>
+          <ixx>0.005812</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.008896</iyy>
+          <iyy>0.005812</iyy>
           <iyz>0</iyz>
-          <izz>0.009031</izz>
+          <izz>0.010125</izz>
         </inertia>
       </inertial>
+      <collision name='base_link_lump::base_plate_collision'>
+        <pose frame=''>0 0 0.0525 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.001</length>
+            <radius>0.07</radius>
+          </cylinder>
+        </geometry>
+      </collision>
       <gravity>1</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <link name='wheel_fl'>
-      <pose frame=''>0.0375 0.06495 0.125 0 -0 1.0472</pose>
+      <pose frame=''>0.0375 0.06495 0.075 0 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0.007 0 0 0 1.5707 0</pose>
-        <mass>0.05</mass>
+        <mass>0.005</mass>
         <inertia>
-          <ixx>1e-05</ixx>
+          <ixx>8.229e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-05</iyy>
+          <iyy>8.229e-07</iyy>
           <iyz>0</iyz>
-          <izz>1.8e-05</izz>
+          <izz>1.5625e-06</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.42</linear>
-        <angular>0.42</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='base_wheel_fl' type='revolute'>
@@ -49,8 +55,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>0.01</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -66,17 +70,17 @@
       </physics>
     </joint>
     <link name='sub_wheel_fl_1'>
-      <pose frame=''>0.021947 0.082012 0.125 0 -0 1.0472</pose>
+      <pose frame=''>0.021947 0.082012 0.075 0 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_1_lump::wheel_collision'>
@@ -98,10 +102,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_1' type='revolute'>
@@ -114,8 +115,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -123,17 +122,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_10'>
-      <pose frame=''>0.05912 0.060551 0.131798 2.82743 0 1.0472</pose>
+      <pose frame=''>0.05912 0.060551 0.081798 2.82743 0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_10_lump::wheel_collision'>
@@ -155,10 +154,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_10' type='revolute'>
@@ -171,8 +167,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -180,17 +174,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_11'>
-      <pose frame=''>0.060053 0.060012 0.125 -3.14159 0 1.0472</pose>
+      <pose frame=''>0.060053 0.060012 0.075 -3.14159 0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_11_lump::wheel_collision'>
@@ -212,10 +206,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_11' type='revolute'>
@@ -228,8 +219,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -237,17 +226,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_12'>
-      <pose frame=''>0.05912 0.060551 0.118202 -2.82743 -0 1.0472</pose>
+      <pose frame=''>0.05912 0.060551 0.068202 -2.82743 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_12_lump::wheel_collision'>
@@ -269,10 +258,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_12' type='revolute'>
@@ -285,8 +271,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -294,17 +278,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_13'>
-      <pose frame=''>0.056414 0.062113 0.112069 -2.51327 -0 1.0472</pose>
+      <pose frame=''>0.056414 0.062113 0.062069 -2.51327 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_13_lump::wheel_collision'>
@@ -326,10 +310,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_13' type='revolute'>
@@ -342,8 +323,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -351,17 +330,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_14'>
-      <pose frame=''>0.052199 0.064547 0.107202 -2.19912 -0 1.0472</pose>
+      <pose frame=''>0.052199 0.064547 0.057202 -2.19912 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_14_lump::wheel_collision'>
@@ -383,10 +362,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_14' type='revolute'>
@@ -399,8 +375,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -408,17 +382,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_15'>
-      <pose frame=''>0.046888 0.067613 0.104077 -1.88496 -0 1.0472</pose>
+      <pose frame=''>0.046888 0.067613 0.054077 -1.88496 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_15_lump::wheel_collision'>
@@ -440,10 +414,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_15' type='revolute'>
@@ -456,8 +427,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -465,17 +434,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_16'>
-      <pose frame=''>0.041 0.071012 0.103 -1.5708 -0 1.0472</pose>
+      <pose frame=''>0.041 0.071012 0.053 -1.5708 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_16_lump::wheel_collision'>
@@ -497,10 +466,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_16' type='revolute'>
@@ -513,8 +479,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -522,17 +486,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_17'>
-      <pose frame=''>0.035112 0.074411 0.104077 -1.25664 -0 1.0472</pose>
+      <pose frame=''>0.035112 0.074411 0.054077 -1.25664 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_17_lump::wheel_collision'>
@@ -554,10 +518,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_17' type='revolute'>
@@ -570,8 +531,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -579,17 +538,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_18'>
-      <pose frame=''>0.029801 0.077478 0.107202 -0.942477 -0 1.0472</pose>
+      <pose frame=''>0.029801 0.077478 0.057202 -0.942477 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_18_lump::wheel_collision'>
@@ -611,10 +570,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_18' type='revolute'>
@@ -627,8 +583,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -636,17 +590,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_19'>
-      <pose frame=''>0.025586 0.079911 0.112069 -0.628318 -0 1.0472</pose>
+      <pose frame=''>0.025586 0.079911 0.062069 -0.628318 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_19_lump::wheel_collision'>
@@ -668,10 +622,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_19' type='revolute'>
@@ -684,8 +635,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -693,17 +642,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_2'>
-      <pose frame=''>0.02288 0.081474 0.131798 0.314159 -0 1.0472</pose>
+      <pose frame=''>0.02288 0.081474 0.081798 0.314159 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_2_lump::wheel_collision'>
@@ -725,10 +674,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_2' type='revolute'>
@@ -741,8 +687,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -750,17 +694,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_20'>
-      <pose frame=''>0.02288 0.081474 0.118202 -0.314159 0 1.0472</pose>
+      <pose frame=''>0.02288 0.081474 0.068202 -0.314159 0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_20_lump::wheel_collision'>
@@ -782,10 +726,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_20' type='revolute'>
@@ -798,8 +739,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -807,17 +746,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_3'>
-      <pose frame=''>0.025586 0.079911 0.137931 0.628319 -0 1.0472</pose>
+      <pose frame=''>0.025586 0.079911 0.087931 0.628319 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_3_lump::wheel_collision'>
@@ -839,10 +778,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_3' type='revolute'>
@@ -855,8 +791,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -864,17 +798,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_4'>
-      <pose frame=''>0.029801 0.077478 0.142798 0.942478 -0 1.0472</pose>
+      <pose frame=''>0.029801 0.077478 0.092798 0.942478 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_4_lump::wheel_collision'>
@@ -896,10 +830,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_4' type='revolute'>
@@ -912,8 +843,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -921,17 +850,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_5'>
-      <pose frame=''>0.035112 0.074411 0.145923 1.25664 0 1.0472</pose>
+      <pose frame=''>0.035112 0.074411 0.095923 1.25664 0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_5_lump::wheel_collision'>
@@ -953,10 +882,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_5' type='revolute'>
@@ -969,8 +895,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -978,17 +902,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_6'>
-      <pose frame=''>0.041 0.071012 0.147 1.5708 -0 1.0472</pose>
+      <pose frame=''>0.041 0.071012 0.097 1.5708 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_6_lump::wheel_collision'>
@@ -1010,10 +934,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_6' type='revolute'>
@@ -1026,8 +947,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1035,17 +954,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_7'>
-      <pose frame=''>0.046888 0.067613 0.145923 1.88496 -0 1.0472</pose>
+      <pose frame=''>0.046888 0.067613 0.095923 1.88496 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_7_lump::wheel_collision'>
@@ -1067,10 +986,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_7' type='revolute'>
@@ -1083,8 +999,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1092,17 +1006,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_8'>
-      <pose frame=''>0.052199 0.064547 0.142798 2.19911 -0 1.0472</pose>
+      <pose frame=''>0.052199 0.064547 0.092798 2.19911 -0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_8_lump::wheel_collision'>
@@ -1124,10 +1038,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_8' type='revolute'>
@@ -1140,8 +1051,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1149,17 +1058,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fl_9'>
-      <pose frame=''>0.056414 0.062113 0.137931 2.51327 0 1.0472</pose>
+      <pose frame=''>0.056414 0.062113 0.087931 2.51327 0 1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fl_9_lump::wheel_collision'>
@@ -1181,10 +1090,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fl_9' type='revolute'>
@@ -1197,8 +1103,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1206,24 +1110,21 @@
       </axis>
     </joint>
     <link name='wheel_fr'>
-      <pose frame=''>0.0375 -0.06495 0.125 0 0 -1.0472</pose>
+      <pose frame=''>0.0375 -0.06495 0.075 0 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0.007 0 0 0 1.5707 0</pose>
-        <mass>0.05</mass>
+        <mass>0.005</mass>
         <inertia>
-          <ixx>1e-05</ixx>
+          <ixx>8.229e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-05</iyy>
+          <iyy>8.229e-07</iyy>
           <iyz>0</iyz>
-          <izz>1.8e-05</izz>
+          <izz>1.5625e-06</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.42</linear>
-        <angular>0.42</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='base_wheel_fr' type='revolute'>
@@ -1236,8 +1137,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>0.01</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1253,17 +1152,17 @@
       </physics>
     </joint>
     <link name='sub_wheel_fr_1'>
-      <pose frame=''>0.060053 -0.060012 0.125 0 0 -1.0472</pose>
+      <pose frame=''>0.060053 -0.060012 0.075 0 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_1_lump::wheel_collision'>
@@ -1285,10 +1184,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_1' type='revolute'>
@@ -1301,8 +1197,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1310,17 +1204,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_10'>
-      <pose frame=''>0.02288 -0.081474 0.131798 2.82743 -0 -1.0472</pose>
+      <pose frame=''>0.02288 -0.081474 0.081798 2.82743 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_10_lump::wheel_collision'>
@@ -1342,10 +1236,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_10' type='revolute'>
@@ -1358,8 +1249,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1367,17 +1256,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_11'>
-      <pose frame=''>0.021947 -0.082012 0.125 -3.14159 -0 -1.0472</pose>
+      <pose frame=''>0.021947 -0.082012 0.075 -3.14159 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_11_lump::wheel_collision'>
@@ -1399,10 +1288,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_11' type='revolute'>
@@ -1415,8 +1301,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1424,17 +1308,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_12'>
-      <pose frame=''>0.02288 -0.081474 0.118202 -2.82743 -0 -1.0472</pose>
+      <pose frame=''>0.02288 -0.081474 0.068202 -2.82743 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_12_lump::wheel_collision'>
@@ -1456,10 +1340,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_12' type='revolute'>
@@ -1472,8 +1353,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1481,17 +1360,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_13'>
-      <pose frame=''>0.025586 -0.079911 0.112069 -2.51327 -0 -1.0472</pose>
+      <pose frame=''>0.025586 -0.079911 0.062069 -2.51327 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_13_lump::wheel_collision'>
@@ -1513,10 +1392,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_13' type='revolute'>
@@ -1529,8 +1405,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1538,17 +1412,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_14'>
-      <pose frame=''>0.029801 -0.077478 0.107202 -2.19912 0 -1.0472</pose>
+      <pose frame=''>0.029801 -0.077478 0.057202 -2.19912 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_14_lump::wheel_collision'>
@@ -1570,10 +1444,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_14' type='revolute'>
@@ -1586,8 +1457,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1595,17 +1464,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_15'>
-      <pose frame=''>0.035112 -0.074411 0.104077 -1.88496 -0 -1.0472</pose>
+      <pose frame=''>0.035112 -0.074411 0.054077 -1.88496 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_15_lump::wheel_collision'>
@@ -1627,10 +1496,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_15' type='revolute'>
@@ -1643,8 +1509,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1652,17 +1516,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_16'>
-      <pose frame=''>0.041 -0.071012 0.103 -1.5708 -0 -1.0472</pose>
+      <pose frame=''>0.041 -0.071012 0.053 -1.5708 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_16_lump::wheel_collision'>
@@ -1684,10 +1548,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_16' type='revolute'>
@@ -1700,8 +1561,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1709,17 +1568,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_17'>
-      <pose frame=''>0.046888 -0.067613 0.104077 -1.25664 0 -1.0472</pose>
+      <pose frame=''>0.046888 -0.067613 0.054077 -1.25664 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_17_lump::wheel_collision'>
@@ -1741,10 +1600,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_17' type='revolute'>
@@ -1757,8 +1613,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1766,17 +1620,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_18'>
-      <pose frame=''>0.052199 -0.064547 0.107202 -0.942477 -0 -1.0472</pose>
+      <pose frame=''>0.052199 -0.064547 0.057202 -0.942477 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_18_lump::wheel_collision'>
@@ -1798,10 +1652,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_18' type='revolute'>
@@ -1814,8 +1665,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1823,17 +1672,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_19'>
-      <pose frame=''>0.056414 -0.062113 0.112069 -0.628318 -0 -1.0472</pose>
+      <pose frame=''>0.056414 -0.062113 0.062069 -0.628318 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_19_lump::wheel_collision'>
@@ -1855,10 +1704,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_19' type='revolute'>
@@ -1871,8 +1717,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1880,17 +1724,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_2'>
-      <pose frame=''>0.05912 -0.060551 0.131798 0.314159 0 -1.0472</pose>
+      <pose frame=''>0.05912 -0.060551 0.081798 0.314159 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_2_lump::wheel_collision'>
@@ -1912,10 +1756,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_2' type='revolute'>
@@ -1928,8 +1769,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1937,17 +1776,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_20'>
-      <pose frame=''>0.05912 -0.060551 0.118202 -0.314159 -0 -1.0472</pose>
+      <pose frame=''>0.05912 -0.060551 0.068202 -0.314159 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_20_lump::wheel_collision'>
@@ -1969,10 +1808,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_20' type='revolute'>
@@ -1985,8 +1821,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1994,17 +1828,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_3'>
-      <pose frame=''>0.056414 -0.062113 0.137931 0.628319 -0 -1.0472</pose>
+      <pose frame=''>0.056414 -0.062113 0.087931 0.628319 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_3_lump::wheel_collision'>
@@ -2026,10 +1860,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_3' type='revolute'>
@@ -2042,8 +1873,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2051,17 +1880,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_4'>
-      <pose frame=''>0.052199 -0.064547 0.142798 0.942478 0 -1.0472</pose>
+      <pose frame=''>0.052199 -0.064547 0.092798 0.942478 0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_4_lump::wheel_collision'>
@@ -2083,10 +1912,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_4' type='revolute'>
@@ -2099,8 +1925,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2108,17 +1932,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_5'>
-      <pose frame=''>0.046888 -0.067613 0.145923 1.25664 -0 -1.0472</pose>
+      <pose frame=''>0.046888 -0.067613 0.095923 1.25664 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_5_lump::wheel_collision'>
@@ -2140,10 +1964,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_5' type='revolute'>
@@ -2156,8 +1977,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2165,17 +1984,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_6'>
-      <pose frame=''>0.041 -0.071012 0.147 1.5708 -0 -1.0472</pose>
+      <pose frame=''>0.041 -0.071012 0.097 1.5708 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_6_lump::wheel_collision'>
@@ -2197,10 +2016,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_6' type='revolute'>
@@ -2213,8 +2029,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2222,17 +2036,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_7'>
-      <pose frame=''>0.035112 -0.074411 0.145923 1.88496 -0 -1.0472</pose>
+      <pose frame=''>0.035112 -0.074411 0.095923 1.88496 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_7_lump::wheel_collision'>
@@ -2254,10 +2068,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_7' type='revolute'>
@@ -2270,8 +2081,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2279,17 +2088,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_8'>
-      <pose frame=''>0.029801 -0.077478 0.142798 2.19911 -0 -1.0472</pose>
+      <pose frame=''>0.029801 -0.077478 0.092798 2.19911 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_8_lump::wheel_collision'>
@@ -2311,10 +2120,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_8' type='revolute'>
@@ -2327,8 +2133,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2336,17 +2140,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_fr_9'>
-      <pose frame=''>0.025586 -0.079911 0.137931 2.51327 -0 -1.0472</pose>
+      <pose frame=''>0.025586 -0.079911 0.087931 2.51327 -0 -1.0472</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_fr_9_lump::wheel_collision'>
@@ -2368,10 +2172,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_fr_9' type='revolute'>
@@ -2384,8 +2185,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2393,24 +2192,21 @@
       </axis>
     </joint>
     <link name='wheel_rl'>
-      <pose frame=''>-0.053033 0.053033 0.125 0 -0 2.3562</pose>
+      <pose frame=''>-0.053033 0.053033 0.075 0 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0.007 0 0 0 1.5707 0</pose>
-        <mass>0.05</mass>
+        <mass>0.005</mass>
         <inertia>
-          <ixx>1e-05</ixx>
+          <ixx>8.229e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-05</iyy>
+          <iyy>8.229e-07</iyy>
           <iyz>0</iyz>
-          <izz>1.8e-05</izz>
+          <izz>1.5625e-06</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.42</linear>
-        <angular>0.42</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='base_wheel_rl' type='revolute'>
@@ -2423,8 +2219,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>0.01</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2440,17 +2234,17 @@
       </physics>
     </joint>
     <link name='sub_wheel_rl_1'>
-      <pose frame=''>-0.073539 0.042426 0.125 0 -0 2.3562</pose>
+      <pose frame=''>-0.073539 0.042426 0.075 0 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_1_lump::wheel_collision'>
@@ -2472,10 +2266,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_1' type='revolute'>
@@ -2488,8 +2279,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2497,17 +2286,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_10'>
-      <pose frame=''>-0.043187 0.072777 0.131798 2.82743 -0 2.3562</pose>
+      <pose frame=''>-0.043187 0.072777 0.081798 2.82743 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_10_lump::wheel_collision'>
@@ -2529,10 +2318,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_10' type='revolute'>
@@ -2545,8 +2331,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2554,17 +2338,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_11'>
-      <pose frame=''>-0.042426 0.073539 0.125 -3.14159 0 2.3562</pose>
+      <pose frame=''>-0.042426 0.073539 0.075 -3.14159 0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_11_lump::wheel_collision'>
@@ -2586,10 +2370,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_11' type='revolute'>
@@ -2602,8 +2383,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2611,17 +2390,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_12'>
-      <pose frame=''>-0.043187 0.072777 0.118202 -2.82743 -0 2.3562</pose>
+      <pose frame=''>-0.043187 0.072777 0.068202 -2.82743 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_12_lump::wheel_collision'>
@@ -2643,10 +2422,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_12' type='revolute'>
@@ -2659,8 +2435,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2668,17 +2442,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_13'>
-      <pose frame=''>-0.045397 0.070568 0.112069 -2.51327 -0 2.3562</pose>
+      <pose frame=''>-0.045397 0.070568 0.062069 -2.51327 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_13_lump::wheel_collision'>
@@ -2700,10 +2474,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_13' type='revolute'>
@@ -2716,8 +2487,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2725,17 +2494,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_14'>
-      <pose frame=''>-0.048839 0.067126 0.107202 -2.19912 -0 2.3562</pose>
+      <pose frame=''>-0.048839 0.067126 0.057202 -2.19912 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_14_lump::wheel_collision'>
@@ -2757,10 +2526,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_14' type='revolute'>
@@ -2773,8 +2539,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2782,17 +2546,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_15'>
-      <pose frame=''>-0.053175 0.062789 0.104077 -1.88496 -0 2.3562</pose>
+      <pose frame=''>-0.053175 0.062789 0.054077 -1.88496 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_15_lump::wheel_collision'>
@@ -2814,10 +2578,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_15' type='revolute'>
@@ -2830,8 +2591,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2839,17 +2598,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_16'>
-      <pose frame=''>-0.057982 0.057982 0.103 -1.5708 -0 2.3562</pose>
+      <pose frame=''>-0.057982 0.057982 0.053 -1.5708 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_16_lump::wheel_collision'>
@@ -2871,10 +2630,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_16' type='revolute'>
@@ -2887,8 +2643,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2896,17 +2650,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_17'>
-      <pose frame=''>-0.062789 0.053175 0.104077 -1.25664 0 2.3562</pose>
+      <pose frame=''>-0.062789 0.053175 0.054077 -1.25664 0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_17_lump::wheel_collision'>
@@ -2928,10 +2682,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_17' type='revolute'>
@@ -2944,8 +2695,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -2953,17 +2702,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_18'>
-      <pose frame=''>-0.067126 0.048838 0.107202 -0.942477 -0 2.3562</pose>
+      <pose frame=''>-0.067126 0.048838 0.057202 -0.942477 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_18_lump::wheel_collision'>
@@ -2985,10 +2734,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_18' type='revolute'>
@@ -3001,8 +2747,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3010,17 +2754,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_19'>
-      <pose frame=''>-0.070568 0.045397 0.112069 -0.628318 -0 2.3562</pose>
+      <pose frame=''>-0.070568 0.045397 0.062069 -0.628318 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_19_lump::wheel_collision'>
@@ -3042,10 +2786,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_19' type='revolute'>
@@ -3058,8 +2799,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3067,17 +2806,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_2'>
-      <pose frame=''>-0.072777 0.043187 0.131798 0.314159 -0 2.3562</pose>
+      <pose frame=''>-0.072777 0.043187 0.081798 0.314159 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_2_lump::wheel_collision'>
@@ -3099,10 +2838,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_2' type='revolute'>
@@ -3115,8 +2851,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3124,17 +2858,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_20'>
-      <pose frame=''>-0.072777 0.043187 0.118202 -0.314159 -0 2.3562</pose>
+      <pose frame=''>-0.072777 0.043187 0.068202 -0.314159 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_20_lump::wheel_collision'>
@@ -3156,10 +2890,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_20' type='revolute'>
@@ -3172,8 +2903,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3181,17 +2910,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_3'>
-      <pose frame=''>-0.070568 0.045397 0.137931 0.628319 -0 2.3562</pose>
+      <pose frame=''>-0.070568 0.045397 0.087931 0.628319 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_3_lump::wheel_collision'>
@@ -3213,10 +2942,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_3' type='revolute'>
@@ -3229,8 +2955,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3238,17 +2962,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_4'>
-      <pose frame=''>-0.067126 0.048838 0.142798 0.942478 0 2.3562</pose>
+      <pose frame=''>-0.067126 0.048838 0.092798 0.942478 0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_4_lump::wheel_collision'>
@@ -3270,10 +2994,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_4' type='revolute'>
@@ -3286,8 +3007,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3295,17 +3014,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_5'>
-      <pose frame=''>-0.062789 0.053175 0.145923 1.25664 -0 2.3562</pose>
+      <pose frame=''>-0.062789 0.053175 0.095923 1.25664 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_5_lump::wheel_collision'>
@@ -3327,10 +3046,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_5' type='revolute'>
@@ -3343,8 +3059,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3352,17 +3066,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_6'>
-      <pose frame=''>-0.057982 0.057982 0.147 1.5708 -0 2.3562</pose>
+      <pose frame=''>-0.057982 0.057982 0.097 1.5708 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_6_lump::wheel_collision'>
@@ -3384,10 +3098,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_6' type='revolute'>
@@ -3400,8 +3111,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3409,17 +3118,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_7'>
-      <pose frame=''>-0.053175 0.062789 0.145923 1.88496 -0 2.3562</pose>
+      <pose frame=''>-0.053175 0.062789 0.095923 1.88496 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_7_lump::wheel_collision'>
@@ -3441,10 +3150,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_7' type='revolute'>
@@ -3457,8 +3163,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3466,17 +3170,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_8'>
-      <pose frame=''>-0.048839 0.067126 0.142798 2.19911 -0 2.3562</pose>
+      <pose frame=''>-0.048839 0.067126 0.092798 2.19911 -0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_8_lump::wheel_collision'>
@@ -3498,10 +3202,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_8' type='revolute'>
@@ -3514,8 +3215,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3523,17 +3222,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rl_9'>
-      <pose frame=''>-0.045397 0.070568 0.137931 2.51327 0 2.3562</pose>
+      <pose frame=''>-0.045397 0.070568 0.087931 2.51327 0 2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rl_9_lump::wheel_collision'>
@@ -3555,10 +3254,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rl_9' type='revolute'>
@@ -3571,8 +3267,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3580,24 +3274,21 @@
       </axis>
     </joint>
     <link name='wheel_rr'>
-      <pose frame=''>-0.053033 -0.053033 0.125 0 0 -2.3562</pose>
+      <pose frame=''>-0.053033 -0.053033 0.075 0 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0.007 0 0 0 1.5707 0</pose>
-        <mass>0.05</mass>
+        <mass>0.005</mass>
         <inertia>
-          <ixx>1e-05</ixx>
+          <ixx>8.229e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-05</iyy>
+          <iyy>8.229e-07</iyy>
           <iyz>0</iyz>
-          <izz>1.8e-05</izz>
+          <izz>1.5625e-06</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.42</linear>
-        <angular>0.42</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='base_wheel_rr' type='revolute'>
@@ -3610,8 +3301,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>0.01</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3627,17 +3316,17 @@
       </physics>
     </joint>
     <link name='sub_wheel_rr_1'>
-      <pose frame=''>-0.042426 -0.073539 0.125 0 0 -2.3562</pose>
+      <pose frame=''>-0.042426 -0.073539 0.075 0 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_1_lump::wheel_collision'>
@@ -3659,10 +3348,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_1' type='revolute'>
@@ -3675,8 +3361,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3684,17 +3368,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_10'>
-      <pose frame=''>-0.072777 -0.043187 0.131798 2.82743 0 -2.3562</pose>
+      <pose frame=''>-0.072777 -0.043187 0.081798 2.82743 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_10_lump::wheel_collision'>
@@ -3716,10 +3400,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_10' type='revolute'>
@@ -3732,8 +3413,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3741,17 +3420,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_11'>
-      <pose frame=''>-0.073539 -0.042426 0.125 -3.14159 -0 -2.3562</pose>
+      <pose frame=''>-0.073539 -0.042426 0.075 -3.14159 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_11_lump::wheel_collision'>
@@ -3773,10 +3452,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_11' type='revolute'>
@@ -3789,8 +3465,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3798,17 +3472,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_12'>
-      <pose frame=''>-0.072777 -0.043187 0.118202 -2.82743 0 -2.3562</pose>
+      <pose frame=''>-0.072777 -0.043187 0.068202 -2.82743 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_12_lump::wheel_collision'>
@@ -3830,10 +3504,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_12' type='revolute'>
@@ -3846,8 +3517,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3855,17 +3524,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_13'>
-      <pose frame=''>-0.070568 -0.045397 0.112069 -2.51327 0 -2.3562</pose>
+      <pose frame=''>-0.070568 -0.045397 0.062069 -2.51327 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_13_lump::wheel_collision'>
@@ -3887,10 +3556,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_13' type='revolute'>
@@ -3903,8 +3569,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3912,17 +3576,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_14'>
-      <pose frame=''>-0.067126 -0.048838 0.107202 -2.19912 0 -2.3562</pose>
+      <pose frame=''>-0.067126 -0.048838 0.057202 -2.19912 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_14_lump::wheel_collision'>
@@ -3944,10 +3608,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_14' type='revolute'>
@@ -3960,8 +3621,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -3969,17 +3628,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_15'>
-      <pose frame=''>-0.062789 -0.053175 0.104077 -1.88496 -0 -2.3562</pose>
+      <pose frame=''>-0.062789 -0.053175 0.054077 -1.88496 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_15_lump::wheel_collision'>
@@ -4001,10 +3660,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_15' type='revolute'>
@@ -4017,8 +3673,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4026,17 +3680,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_16'>
-      <pose frame=''>-0.057982 -0.057982 0.103 -1.5708 -0 -2.3562</pose>
+      <pose frame=''>-0.057982 -0.057982 0.053 -1.5708 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_16_lump::wheel_collision'>
@@ -4058,10 +3712,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_16' type='revolute'>
@@ -4074,8 +3725,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4083,17 +3732,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_17'>
-      <pose frame=''>-0.053175 -0.062789 0.104077 -1.25664 -0 -2.3562</pose>
+      <pose frame=''>-0.053175 -0.062789 0.054077 -1.25664 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_17_lump::wheel_collision'>
@@ -4115,10 +3764,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_17' type='revolute'>
@@ -4131,8 +3777,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4140,17 +3784,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_18'>
-      <pose frame=''>-0.048839 -0.067126 0.107202 -0.942477 -0 -2.3562</pose>
+      <pose frame=''>-0.048839 -0.067126 0.057202 -0.942477 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_18_lump::wheel_collision'>
@@ -4172,10 +3816,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_18' type='revolute'>
@@ -4188,8 +3829,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4197,17 +3836,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_19'>
-      <pose frame=''>-0.045397 -0.070568 0.112069 -0.628318 0 -2.3562</pose>
+      <pose frame=''>-0.045397 -0.070568 0.062069 -0.628318 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_19_lump::wheel_collision'>
@@ -4229,10 +3868,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_19' type='revolute'>
@@ -4245,8 +3881,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4254,17 +3888,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_2'>
-      <pose frame=''>-0.043187 -0.072777 0.131798 0.314159 -0 -2.3562</pose>
+      <pose frame=''>-0.043187 -0.072777 0.081798 0.314159 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_2_lump::wheel_collision'>
@@ -4286,10 +3920,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_2' type='revolute'>
@@ -4302,8 +3933,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4311,17 +3940,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_20'>
-      <pose frame=''>-0.043187 -0.072777 0.118202 -0.314159 -0 -2.3562</pose>
+      <pose frame=''>-0.043187 -0.072777 0.068202 -0.314159 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_20_lump::wheel_collision'>
@@ -4343,10 +3972,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_20' type='revolute'>
@@ -4359,8 +3985,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4368,17 +3992,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_3'>
-      <pose frame=''>-0.045397 -0.070568 0.137931 0.628319 -0 -2.3562</pose>
+      <pose frame=''>-0.045397 -0.070568 0.087931 0.628319 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_3_lump::wheel_collision'>
@@ -4400,10 +4024,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_3' type='revolute'>
@@ -4416,8 +4037,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4425,17 +4044,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_4'>
-      <pose frame=''>-0.048839 -0.067126 0.142798 0.942478 -0 -2.3562</pose>
+      <pose frame=''>-0.048839 -0.067126 0.092798 0.942478 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_4_lump::wheel_collision'>
@@ -4457,10 +4076,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_4' type='revolute'>
@@ -4473,8 +4089,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4482,17 +4096,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_5'>
-      <pose frame=''>-0.053175 -0.062789 0.145923 1.25664 0 -2.3562</pose>
+      <pose frame=''>-0.053175 -0.062789 0.095923 1.25664 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_5_lump::wheel_collision'>
@@ -4514,10 +4128,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_5' type='revolute'>
@@ -4530,8 +4141,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4539,17 +4148,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_6'>
-      <pose frame=''>-0.057982 -0.057982 0.147 1.5708 0 -2.3562</pose>
+      <pose frame=''>-0.057982 -0.057982 0.097 1.5708 0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_6_lump::wheel_collision'>
@@ -4571,10 +4180,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_6' type='revolute'>
@@ -4587,8 +4193,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4596,17 +4200,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_7'>
-      <pose frame=''>-0.062789 -0.053175 0.145923 1.88496 -0 -2.3562</pose>
+      <pose frame=''>-0.062789 -0.053175 0.095923 1.88496 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_7_lump::wheel_collision'>
@@ -4628,10 +4232,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_7' type='revolute'>
@@ -4644,8 +4245,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4653,17 +4252,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_8'>
-      <pose frame=''>-0.067126 -0.048838 0.142798 2.19911 -0 -2.3562</pose>
+      <pose frame=''>-0.067126 -0.048838 0.092798 2.19911 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_8_lump::wheel_collision'>
@@ -4685,10 +4284,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_8' type='revolute'>
@@ -4701,8 +4297,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -4710,17 +4304,17 @@
       </axis>
     </joint>
     <link name='sub_wheel_rr_9'>
-      <pose frame=''>-0.070568 -0.045397 0.137931 2.51327 -0 -2.3562</pose>
+      <pose frame=''>-0.070568 -0.045397 0.087931 2.51327 -0 -2.3562</pose>
       <inertial>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1e-08</ixx>
+          <ixx>1.11e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1e-08</iyy>
+          <iyy>1.11e-08</iyy>
           <iyz>0</iyz>
-          <izz>1e-08</izz>
+          <izz>2.11e-08</izz>
         </inertia>
       </inertial>
       <collision name='sub_wheel_rr_9_lump::wheel_collision'>
@@ -4742,10 +4336,7 @@
         </geometry>
       </visual>
       <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.43</linear>
-        <angular>0.43</angular>
-      </velocity_decay>
+      <velocity_decay/>
       <self_collide>0</self_collide>
     </link>
     <joint name='wheel_subwheel_rr_9' type='revolute'>
@@ -4758,8 +4349,6 @@
           <upper>1e+16</upper>
         </limit>
         <dynamics>
-          <damping>0</damping>
-          <friction>42</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>

@@ -15,504 +15,664 @@
     <material>Gazebo/White</material>
   </gazebo>
   <gazebo reference="sub_wheel_fl_1">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_1">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_1">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_1">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_2">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_2">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_2">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_2">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_3">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_3">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_3">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_3">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_4">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_4">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_4">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_4">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_5">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_5">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_5">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_5">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_6">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_6">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_6">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_6">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_7">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_7">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_7">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_7">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_8">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_8">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_8">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_8">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_9">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_9">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_9">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_9">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_10">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_10">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_10">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_10">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_11">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_11">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_11">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_11">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_12">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_12">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_12">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_12">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_13">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_13">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_13">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_13">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_14">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_14">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_14">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_14">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_15">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_15">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_15">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_15">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_16">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_16">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_16">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_16">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_17">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_17">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_17">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_17">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_18">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_18">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_18">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_18">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_19">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_19">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_19">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_19">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fl_20">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_fr_20">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rl_20">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="sub_wheel_rr_20">
-    <mu>44</mu>
+    <mu1>2</mu1>
     <mu2>2</mu2>
     <fdir1>0 0 0</fdir1>
-    <dampingFactor>0.43</dampingFactor>
+    <!--
+    <dampingFactor>0.7</dampingFactor>
+-->
   </gazebo>
   <gazebo reference="wheel_fl">
-    <dampingFactor>0.42</dampingFactor>
   </gazebo>
   <gazebo reference="wheel_fr">
-    <dampingFactor>0.42</dampingFactor>
   </gazebo>
   <gazebo reference="wheel_rl">
-    <dampingFactor>0.42</dampingFactor>
   </gazebo>
   <gazebo reference="wheel_rr">
-    <dampingFactor>0.42</dampingFactor>
   </gazebo>
   <gazebo reference="base_wheel_fl">
+    <dampingFactor>0.02</dampingFactor>
   </gazebo>
   <gazebo reference="base_wheel_fr">
+    <dampingFactor>0.02</dampingFactor>
   </gazebo>
   <gazebo reference="base_wheel_rl">
+    <dampingFactor>0.02</dampingFactor>
   </gazebo>
   <gazebo reference="base_wheel_rr">
+    <dampingFactor>0.02</dampingFactor>
   </gazebo>
   <material name="black">
     <color rgba="0.0 0.0 0.0 1.0"/>
@@ -545,39 +705,36 @@
   </link>
   <link name="base_plate">
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0.0445"/>
+      <origin rpy="0 0 0" xyz="0 0 0.04"/>
       <mass value="2.50"/>
-      <inertia ixx="0.008896" ixy="0" ixz="0" iyy="0.008896" iyz="0" izz="0.009031"/>
+      <inertia ixx="0.005812" ixy="0" ixz="0" iyy="0.005812" iyz="0" izz="0.010125"/>
     </inertial>
     <!--
    <visual>
-     <origin xyz="0 0 0" rpy="0 0 -1.5707"/>
+     <origin xyz="0 0 ${0.005+ground_clearance}" rpy="0 0 0"/>
      <geometry>
-       <mesh filename="package://ssl_robot_description/meshes/HBG-Roboter-now.stl"/>
-       <cylinder radius="${base_radius}" length="${base_height}"/>
+       <cylinder radius="${base_radius}" length="0.01"/>
      </geometry>
    </visual>
 -->
-    <!--
-   <collision>
-     <origin xyz="0 0 ${base_height/2+ground_clearance}" rpy="0 0 0"/>
-     <geometry>
-       <cylinder radius="${base_radius}" length="${base_height}"/>
-     </geometry>
-   </collision>
--->
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
+      <geometry>
+        <cylinder length="0.001" radius="0.07"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_plate"/>
     <axis xyz="1 0 0"/>
-    <origin rpy="0 0 0" xyz="0 0 0.1"/>
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
   </joint>
   <link name="wheel_fr">
     <inertial>
       <origin rpy="0 1.5707 0" xyz="0.007 0 0"/>
-      <mass value="0.05"/>
-      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000018"/>
+      <mass value="0.0050"/>
+      <inertia ixx="0.0000008229" ixy="0" ixz="0" iyy="0.0000008229" iyz="0" izz="0.0000015625"/>
     </inertial>
     <!--
       <visual name="wheel-visual" >
@@ -587,8 +744,7 @@
           <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
         </geometry>
       </visual>
--->
-    <!--
+      
       <collision name="wheel">
         <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
         <geometry>
@@ -597,46 +753,20 @@
       </collision>
 -->
   </link>
-  <!--
-    <link name="motor_${suffix}">
-      <inertial>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <mass value="0.10" />
-        <inertia ixx="0.000042" ixy="0" ixz="0" iyy="0.000022" iyz="0" izz="0.000022" />
-      </inertial>
-      <visual>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.0005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <geometry>
-          <box size="0.001 ${wheel_radius*2} ${wheel_radius*2}" />
-        </geometry>
-      </visual>
-    </link>
--->
   <joint name="base_wheel_fr" type="continuous">
     <parent link="base_plate"/>
     <child link="wheel_fr"/>
     <axis xyz="1 0 0"/>
-    <!--
-      <origin xyz="${robot_wheel_radius} 0 ${wheel_radius-ground_clearance}" rpy="0 0 ${rotation}" />
--->
     <origin rpy="0 0 -1.0472" xyz="0.0375 -0.06495 0.025"/>
-    <dynamics damping="0.0" friction="0.01"/>
-  </joint>
-  <!--
-    <joint name="base_motor_${suffix}" type="revolute">
-      <parent link="${parent}" />
-      <child link="motor_${suffix}" />
-      <axis xyz="0 0 1" />
-      <limit effort="30" velocity="1.0" lower="${rotation}" upper="${rotation}" />
-      <origin xyz="0 0 0" 
-              rpy="0 0 0" />
-    </joint>
+    <!--
+      <dynamics damping="0.0" friction="0.01" />
 -->
+  </joint>
   <link name="sub_wheel_fr_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -656,7 +786,9 @@
     <child link="sub_wheel_fr_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.0 0 0" xyz="0.007 0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -664,8 +796,8 @@
   <link name="sub_wheel_fr_2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -685,7 +817,9 @@
     <child link="sub_wheel_fr_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.314159 0 0" xyz="0.007 0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -693,8 +827,8 @@
   <link name="sub_wheel_fr_3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -714,7 +848,9 @@
     <child link="sub_wheel_fr_3"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.628319 0 0" xyz="0.007 0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -722,8 +858,8 @@
   <link name="sub_wheel_fr_4">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -743,7 +879,9 @@
     <child link="sub_wheel_fr_4"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.942478 0 0" xyz="0.007 0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -751,8 +889,8 @@
   <link name="sub_wheel_fr_5">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -772,7 +910,9 @@
     <child link="sub_wheel_fr_5"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.256637 0 0" xyz="0.007 0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -780,8 +920,8 @@
   <link name="sub_wheel_fr_6">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -801,7 +941,9 @@
     <child link="sub_wheel_fr_6"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.570796 0 0" xyz="0.007 0.0 0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -809,8 +951,8 @@
   <link name="sub_wheel_fr_7">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -830,7 +972,9 @@
     <child link="sub_wheel_fr_7"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.884956 0 0" xyz="0.007 -0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -838,8 +982,8 @@
   <link name="sub_wheel_fr_8">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -859,7 +1003,9 @@
     <child link="sub_wheel_fr_8"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.199115 0 0" xyz="0.007 -0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -867,8 +1013,8 @@
   <link name="sub_wheel_fr_9">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -888,7 +1034,9 @@
     <child link="sub_wheel_fr_9"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.513274 0 0" xyz="0.007 -0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -896,8 +1044,8 @@
   <link name="sub_wheel_fr_10">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -917,7 +1065,9 @@
     <child link="sub_wheel_fr_10"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.827433 0 0" xyz="0.007 -0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -925,8 +1075,8 @@
   <link name="sub_wheel_fr_11">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -946,7 +1096,9 @@
     <child link="sub_wheel_fr_11"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.141593 0 0" xyz="0.007 -0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -954,8 +1106,8 @@
   <link name="sub_wheel_fr_12">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -975,7 +1127,9 @@
     <child link="sub_wheel_fr_12"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.455752 0 0" xyz="0.007 -0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -983,8 +1137,8 @@
   <link name="sub_wheel_fr_13">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1004,7 +1158,9 @@
     <child link="sub_wheel_fr_13"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.769911 0 0" xyz="0.007 -0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1012,8 +1168,8 @@
   <link name="sub_wheel_fr_14">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1033,7 +1189,9 @@
     <child link="sub_wheel_fr_14"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.08407 0 0" xyz="0.007 -0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1041,8 +1199,8 @@
   <link name="sub_wheel_fr_15">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1062,7 +1220,9 @@
     <child link="sub_wheel_fr_15"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.39823 0 0" xyz="0.007 -0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1070,8 +1230,8 @@
   <link name="sub_wheel_fr_16">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1091,7 +1251,9 @@
     <child link="sub_wheel_fr_16"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.712389 0 0" xyz="0.007 -0.0 -0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1099,8 +1261,8 @@
   <link name="sub_wheel_fr_17">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1120,7 +1282,9 @@
     <child link="sub_wheel_fr_17"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.026548 0 0" xyz="0.007 0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1128,8 +1292,8 @@
   <link name="sub_wheel_fr_18">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1149,7 +1313,9 @@
     <child link="sub_wheel_fr_18"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.340708 0 0" xyz="0.007 0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1157,8 +1323,8 @@
   <link name="sub_wheel_fr_19">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1178,7 +1344,9 @@
     <child link="sub_wheel_fr_19"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.654867 0 0" xyz="0.007 0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1186,8 +1354,8 @@
   <link name="sub_wheel_fr_20">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1207,7 +1375,9 @@
     <child link="sub_wheel_fr_20"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.969026 0 0" xyz="0.007 0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1225,8 +1395,8 @@
   <link name="wheel_fl">
     <inertial>
       <origin rpy="0 1.5707 0" xyz="0.007 0 0"/>
-      <mass value="0.05"/>
-      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000018"/>
+      <mass value="0.0050"/>
+      <inertia ixx="0.0000008229" ixy="0" ixz="0" iyy="0.0000008229" iyz="0" izz="0.0000015625"/>
     </inertial>
     <!--
       <visual name="wheel-visual" >
@@ -1236,8 +1406,7 @@
           <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
         </geometry>
       </visual>
--->
-    <!--
+      
       <collision name="wheel">
         <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
         <geometry>
@@ -1246,46 +1415,20 @@
       </collision>
 -->
   </link>
-  <!--
-    <link name="motor_${suffix}">
-      <inertial>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <mass value="0.10" />
-        <inertia ixx="0.000042" ixy="0" ixz="0" iyy="0.000022" iyz="0" izz="0.000022" />
-      </inertial>
-      <visual>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.0005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <geometry>
-          <box size="0.001 ${wheel_radius*2} ${wheel_radius*2}" />
-        </geometry>
-      </visual>
-    </link>
--->
   <joint name="base_wheel_fl" type="continuous">
     <parent link="base_plate"/>
     <child link="wheel_fl"/>
     <axis xyz="1 0 0"/>
-    <!--
-      <origin xyz="${robot_wheel_radius} 0 ${wheel_radius-ground_clearance}" rpy="0 0 ${rotation}" />
--->
     <origin rpy="0 0 1.0472" xyz="0.0375 0.06495 0.025"/>
-    <dynamics damping="0.0" friction="0.01"/>
-  </joint>
-  <!--
-    <joint name="base_motor_${suffix}" type="revolute">
-      <parent link="${parent}" />
-      <child link="motor_${suffix}" />
-      <axis xyz="0 0 1" />
-      <limit effort="30" velocity="1.0" lower="${rotation}" upper="${rotation}" />
-      <origin xyz="0 0 0" 
-              rpy="0 0 0" />
-    </joint>
+    <!--
+      <dynamics damping="0.0" friction="0.01" />
 -->
+  </joint>
   <link name="sub_wheel_fl_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1305,7 +1448,9 @@
     <child link="sub_wheel_fl_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.0 0 0" xyz="0.007 0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1313,8 +1458,8 @@
   <link name="sub_wheel_fl_2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1334,7 +1479,9 @@
     <child link="sub_wheel_fl_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.314159 0 0" xyz="0.007 0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1342,8 +1489,8 @@
   <link name="sub_wheel_fl_3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1363,7 +1510,9 @@
     <child link="sub_wheel_fl_3"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.628319 0 0" xyz="0.007 0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1371,8 +1520,8 @@
   <link name="sub_wheel_fl_4">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1392,7 +1541,9 @@
     <child link="sub_wheel_fl_4"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.942478 0 0" xyz="0.007 0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1400,8 +1551,8 @@
   <link name="sub_wheel_fl_5">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1421,7 +1572,9 @@
     <child link="sub_wheel_fl_5"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.256637 0 0" xyz="0.007 0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1429,8 +1582,8 @@
   <link name="sub_wheel_fl_6">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1450,7 +1603,9 @@
     <child link="sub_wheel_fl_6"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.570796 0 0" xyz="0.007 0.0 0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1458,8 +1613,8 @@
   <link name="sub_wheel_fl_7">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1479,7 +1634,9 @@
     <child link="sub_wheel_fl_7"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.884956 0 0" xyz="0.007 -0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1487,8 +1644,8 @@
   <link name="sub_wheel_fl_8">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1508,7 +1665,9 @@
     <child link="sub_wheel_fl_8"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.199115 0 0" xyz="0.007 -0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1516,8 +1675,8 @@
   <link name="sub_wheel_fl_9">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1537,7 +1696,9 @@
     <child link="sub_wheel_fl_9"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.513274 0 0" xyz="0.007 -0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1545,8 +1706,8 @@
   <link name="sub_wheel_fl_10">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1566,7 +1727,9 @@
     <child link="sub_wheel_fl_10"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.827433 0 0" xyz="0.007 -0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1574,8 +1737,8 @@
   <link name="sub_wheel_fl_11">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1595,7 +1758,9 @@
     <child link="sub_wheel_fl_11"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.141593 0 0" xyz="0.007 -0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1603,8 +1768,8 @@
   <link name="sub_wheel_fl_12">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1624,7 +1789,9 @@
     <child link="sub_wheel_fl_12"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.455752 0 0" xyz="0.007 -0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1632,8 +1799,8 @@
   <link name="sub_wheel_fl_13">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1653,7 +1820,9 @@
     <child link="sub_wheel_fl_13"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.769911 0 0" xyz="0.007 -0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1661,8 +1830,8 @@
   <link name="sub_wheel_fl_14">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1682,7 +1851,9 @@
     <child link="sub_wheel_fl_14"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.08407 0 0" xyz="0.007 -0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1690,8 +1861,8 @@
   <link name="sub_wheel_fl_15">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1711,7 +1882,9 @@
     <child link="sub_wheel_fl_15"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.39823 0 0" xyz="0.007 -0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1719,8 +1892,8 @@
   <link name="sub_wheel_fl_16">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1740,7 +1913,9 @@
     <child link="sub_wheel_fl_16"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.712389 0 0" xyz="0.007 -0.0 -0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1748,8 +1923,8 @@
   <link name="sub_wheel_fl_17">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1769,7 +1944,9 @@
     <child link="sub_wheel_fl_17"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.026548 0 0" xyz="0.007 0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1777,8 +1954,8 @@
   <link name="sub_wheel_fl_18">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1798,7 +1975,9 @@
     <child link="sub_wheel_fl_18"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.340708 0 0" xyz="0.007 0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1806,8 +1985,8 @@
   <link name="sub_wheel_fl_19">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1827,7 +2006,9 @@
     <child link="sub_wheel_fl_19"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.654867 0 0" xyz="0.007 0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1835,8 +2016,8 @@
   <link name="sub_wheel_fl_20">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1856,7 +2037,9 @@
     <child link="sub_wheel_fl_20"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.969026 0 0" xyz="0.007 0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1874,8 +2057,8 @@
   <link name="wheel_rl">
     <inertial>
       <origin rpy="0 1.5707 0" xyz="0.007 0 0"/>
-      <mass value="0.05"/>
-      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000018"/>
+      <mass value="0.0050"/>
+      <inertia ixx="0.0000008229" ixy="0" ixz="0" iyy="0.0000008229" iyz="0" izz="0.0000015625"/>
     </inertial>
     <!--
       <visual name="wheel-visual" >
@@ -1885,8 +2068,7 @@
           <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
         </geometry>
       </visual>
--->
-    <!--
+      
       <collision name="wheel">
         <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
         <geometry>
@@ -1895,46 +2077,20 @@
       </collision>
 -->
   </link>
-  <!--
-    <link name="motor_${suffix}">
-      <inertial>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <mass value="0.10" />
-        <inertia ixx="0.000042" ixy="0" ixz="0" iyy="0.000022" iyz="0" izz="0.000022" />
-      </inertial>
-      <visual>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.0005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <geometry>
-          <box size="0.001 ${wheel_radius*2} ${wheel_radius*2}" />
-        </geometry>
-      </visual>
-    </link>
--->
   <joint name="base_wheel_rl" type="continuous">
     <parent link="base_plate"/>
     <child link="wheel_rl"/>
     <axis xyz="1 0 0"/>
-    <!--
-      <origin xyz="${robot_wheel_radius} 0 ${wheel_radius-ground_clearance}" rpy="0 0 ${rotation}" />
--->
     <origin rpy="0 0 2.3562" xyz="-0.0530325 0.0530325 0.025"/>
-    <dynamics damping="0.0" friction="0.01"/>
-  </joint>
-  <!--
-    <joint name="base_motor_${suffix}" type="revolute">
-      <parent link="${parent}" />
-      <child link="motor_${suffix}" />
-      <axis xyz="0 0 1" />
-      <limit effort="30" velocity="1.0" lower="${rotation}" upper="${rotation}" />
-      <origin xyz="0 0 0" 
-              rpy="0 0 0" />
-    </joint>
+    <!--
+      <dynamics damping="0.0" friction="0.01" />
 -->
+  </joint>
   <link name="sub_wheel_rl_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1954,7 +2110,9 @@
     <child link="sub_wheel_rl_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.0 0 0" xyz="0.007 0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1962,8 +2120,8 @@
   <link name="sub_wheel_rl_2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1983,7 +2141,9 @@
     <child link="sub_wheel_rl_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.314159 0 0" xyz="0.007 0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -1991,8 +2151,8 @@
   <link name="sub_wheel_rl_3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2012,7 +2172,9 @@
     <child link="sub_wheel_rl_3"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.628319 0 0" xyz="0.007 0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2020,8 +2182,8 @@
   <link name="sub_wheel_rl_4">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2041,7 +2203,9 @@
     <child link="sub_wheel_rl_4"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.942478 0 0" xyz="0.007 0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2049,8 +2213,8 @@
   <link name="sub_wheel_rl_5">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2070,7 +2234,9 @@
     <child link="sub_wheel_rl_5"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.256637 0 0" xyz="0.007 0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2078,8 +2244,8 @@
   <link name="sub_wheel_rl_6">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2099,7 +2265,9 @@
     <child link="sub_wheel_rl_6"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.570796 0 0" xyz="0.007 0.0 0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2107,8 +2275,8 @@
   <link name="sub_wheel_rl_7">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2128,7 +2296,9 @@
     <child link="sub_wheel_rl_7"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.884956 0 0" xyz="0.007 -0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2136,8 +2306,8 @@
   <link name="sub_wheel_rl_8">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2157,7 +2327,9 @@
     <child link="sub_wheel_rl_8"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.199115 0 0" xyz="0.007 -0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2165,8 +2337,8 @@
   <link name="sub_wheel_rl_9">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2186,7 +2358,9 @@
     <child link="sub_wheel_rl_9"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.513274 0 0" xyz="0.007 -0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2194,8 +2368,8 @@
   <link name="sub_wheel_rl_10">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2215,7 +2389,9 @@
     <child link="sub_wheel_rl_10"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.827433 0 0" xyz="0.007 -0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2223,8 +2399,8 @@
   <link name="sub_wheel_rl_11">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2244,7 +2420,9 @@
     <child link="sub_wheel_rl_11"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.141593 0 0" xyz="0.007 -0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2252,8 +2430,8 @@
   <link name="sub_wheel_rl_12">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2273,7 +2451,9 @@
     <child link="sub_wheel_rl_12"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.455752 0 0" xyz="0.007 -0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2281,8 +2461,8 @@
   <link name="sub_wheel_rl_13">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2302,7 +2482,9 @@
     <child link="sub_wheel_rl_13"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.769911 0 0" xyz="0.007 -0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2310,8 +2492,8 @@
   <link name="sub_wheel_rl_14">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2331,7 +2513,9 @@
     <child link="sub_wheel_rl_14"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.08407 0 0" xyz="0.007 -0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2339,8 +2523,8 @@
   <link name="sub_wheel_rl_15">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2360,7 +2544,9 @@
     <child link="sub_wheel_rl_15"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.39823 0 0" xyz="0.007 -0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2368,8 +2554,8 @@
   <link name="sub_wheel_rl_16">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2389,7 +2575,9 @@
     <child link="sub_wheel_rl_16"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.712389 0 0" xyz="0.007 -0.0 -0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2397,8 +2585,8 @@
   <link name="sub_wheel_rl_17">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2418,7 +2606,9 @@
     <child link="sub_wheel_rl_17"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.026548 0 0" xyz="0.007 0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2426,8 +2616,8 @@
   <link name="sub_wheel_rl_18">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2447,7 +2637,9 @@
     <child link="sub_wheel_rl_18"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.340708 0 0" xyz="0.007 0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2455,8 +2647,8 @@
   <link name="sub_wheel_rl_19">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2476,7 +2668,9 @@
     <child link="sub_wheel_rl_19"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.654867 0 0" xyz="0.007 0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2484,8 +2678,8 @@
   <link name="sub_wheel_rl_20">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2505,7 +2699,9 @@
     <child link="sub_wheel_rl_20"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.969026 0 0" xyz="0.007 0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2523,8 +2719,8 @@
   <link name="wheel_rr">
     <inertial>
       <origin rpy="0 1.5707 0" xyz="0.007 0 0"/>
-      <mass value="0.05"/>
-      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000018"/>
+      <mass value="0.0050"/>
+      <inertia ixx="0.0000008229" ixy="0" ixz="0" iyy="0.0000008229" iyz="0" izz="0.0000015625"/>
     </inertial>
     <!--
       <visual name="wheel-visual" >
@@ -2534,8 +2730,7 @@
           <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
         </geometry>
       </visual>
--->
-    <!--
+      
       <collision name="wheel">
         <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
         <geometry>
@@ -2544,46 +2739,20 @@
       </collision>
 -->
   </link>
-  <!--
-    <link name="motor_${suffix}">
-      <inertial>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <mass value="0.10" />
-        <inertia ixx="0.000042" ixy="0" ixz="0" iyy="0.000022" iyz="0" izz="0.000022" />
-      </inertial>
-      <visual>
-        <origin xyz="${robot_wheel_radius-wheel_thickness-0.0005} 0 ${wheel_radius}" rpy="0 0 0" />
-        <geometry>
-          <box size="0.001 ${wheel_radius*2} ${wheel_radius*2}" />
-        </geometry>
-      </visual>
-    </link>
--->
   <joint name="base_wheel_rr" type="continuous">
     <parent link="base_plate"/>
     <child link="wheel_rr"/>
     <axis xyz="1 0 0"/>
-    <!--
-      <origin xyz="${robot_wheel_radius} 0 ${wheel_radius-ground_clearance}" rpy="0 0 ${rotation}" />
--->
     <origin rpy="0 0 -2.3562" xyz="-0.0530325 -0.0530325 0.025"/>
-    <dynamics damping="0.0" friction="0.01"/>
-  </joint>
-  <!--
-    <joint name="base_motor_${suffix}" type="revolute">
-      <parent link="${parent}" />
-      <child link="motor_${suffix}" />
-      <axis xyz="0 0 1" />
-      <limit effort="30" velocity="1.0" lower="${rotation}" upper="${rotation}" />
-      <origin xyz="0 0 0" 
-              rpy="0 0 0" />
-    </joint>
+    <!--
+      <dynamics damping="0.0" friction="0.01" />
 -->
+  </joint>
   <link name="sub_wheel_rr_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2603,7 +2772,9 @@
     <child link="sub_wheel_rr_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.0 0 0" xyz="0.007 0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2611,8 +2782,8 @@
   <link name="sub_wheel_rr_2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2632,7 +2803,9 @@
     <child link="sub_wheel_rr_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.314159 0 0" xyz="0.007 0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2640,8 +2813,8 @@
   <link name="sub_wheel_rr_3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2661,7 +2834,9 @@
     <child link="sub_wheel_rr_3"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.628319 0 0" xyz="0.007 0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2669,8 +2844,8 @@
   <link name="sub_wheel_rr_4">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2690,7 +2865,9 @@
     <child link="sub_wheel_rr_4"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.942478 0 0" xyz="0.007 0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2698,8 +2875,8 @@
   <link name="sub_wheel_rr_5">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2719,7 +2896,9 @@
     <child link="sub_wheel_rr_5"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.256637 0 0" xyz="0.007 0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2727,8 +2906,8 @@
   <link name="sub_wheel_rr_6">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2748,7 +2927,9 @@
     <child link="sub_wheel_rr_6"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.570796 0 0" xyz="0.007 0.0 0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2756,8 +2937,8 @@
   <link name="sub_wheel_rr_7">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2777,7 +2958,9 @@
     <child link="sub_wheel_rr_7"/>
     <axis xyz="0 0 1"/>
     <origin rpy="1.884956 0 0" xyz="0.007 -0.006798374 0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2785,8 +2968,8 @@
   <link name="sub_wheel_rr_8">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2806,7 +2989,9 @@
     <child link="sub_wheel_rr_8"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.199115 0 0" xyz="0.007 -0.01293127 0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2814,8 +2999,8 @@
   <link name="sub_wheel_rr_9">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2835,7 +3020,9 @@
     <child link="sub_wheel_rr_9"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.513274 0 0" xyz="0.007 -0.017798374 0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2843,8 +3030,8 @@
   <link name="sub_wheel_rr_10">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2864,7 +3051,9 @@
     <child link="sub_wheel_rr_10"/>
     <axis xyz="0 0 1"/>
     <origin rpy="2.827433 0 0" xyz="0.007 -0.020923254 0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2872,8 +3061,8 @@
   <link name="sub_wheel_rr_11">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2893,7 +3082,9 @@
     <child link="sub_wheel_rr_11"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.141593 0 0" xyz="0.007 -0.022 0.0"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2901,8 +3092,8 @@
   <link name="sub_wheel_rr_12">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2922,7 +3113,9 @@
     <child link="sub_wheel_rr_12"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.455752 0 0" xyz="0.007 -0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2930,8 +3123,8 @@
   <link name="sub_wheel_rr_13">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2951,7 +3144,9 @@
     <child link="sub_wheel_rr_13"/>
     <axis xyz="0 0 1"/>
     <origin rpy="3.769911 0 0" xyz="0.007 -0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2959,8 +3154,8 @@
   <link name="sub_wheel_rr_14">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -2980,7 +3175,9 @@
     <child link="sub_wheel_rr_14"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.08407 0 0" xyz="0.007 -0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -2988,8 +3185,8 @@
   <link name="sub_wheel_rr_15">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3009,7 +3206,9 @@
     <child link="sub_wheel_rr_15"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.39823 0 0" xyz="0.007 -0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -3017,8 +3216,8 @@
   <link name="sub_wheel_rr_16">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3038,7 +3237,9 @@
     <child link="sub_wheel_rr_16"/>
     <axis xyz="0 0 1"/>
     <origin rpy="4.712389 0 0" xyz="0.007 -0.0 -0.022"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -3046,8 +3247,8 @@
   <link name="sub_wheel_rr_17">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3067,7 +3268,9 @@
     <child link="sub_wheel_rr_17"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.026548 0 0" xyz="0.007 0.006798374 -0.020923254"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -3075,8 +3278,8 @@
   <link name="sub_wheel_rr_18">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3096,7 +3299,9 @@
     <child link="sub_wheel_rr_18"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.340708 0 0" xyz="0.007 0.01293127 -0.017798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -3104,8 +3309,8 @@
   <link name="sub_wheel_rr_19">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3125,7 +3330,9 @@
     <child link="sub_wheel_rr_19"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.654867 0 0" xyz="0.007 0.017798374 -0.01293127"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
@@ -3133,8 +3340,8 @@
   <link name="sub_wheel_rr_20">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.00000001" ixy="0" ixz="0" iyy="0.00000001" iyz="0" izz="0.00000001"/>
+      <mass value="0.0010"/>
+      <inertia ixx="0.0000000111" ixy="0" ixz="0" iyy="0.0000000111" iyz="0" izz="0.0000000211"/>
     </inertial>
     <visual name="wheel-visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -3154,7 +3361,9 @@
     <child link="sub_wheel_rr_20"/>
     <axis xyz="0 0 1"/>
     <origin rpy="5.969026 0 0" xyz="0.007 0.020923254 -0.006798374"/>
-    <dynamics damping="0.0" friction="42"/>
+    <!--
+      <dynamics damping="0.0" friction="0.2" />
+-->
     <!--
       <limit effort="30" velocity="1" />
 -->
