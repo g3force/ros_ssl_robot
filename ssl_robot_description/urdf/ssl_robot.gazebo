@@ -1,41 +1,123 @@
 <?xml version="1.0"?>
-<robot>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/ssl_robot</robotNamespace>
     </plugin>
-<!--
-    <static>true</static>
--->
-    <mu1>0</mu1>
-    <mu2>0</mu2>
+    <static>false</static>
   </gazebo>
 
   <gazebo reference="base_link">
     <material>Gazebo/White</material>
   </gazebo>
   
-  <gazebo reference="wheel_fl">
-    <mu1>1</mu1>
-    <mu2>1</mu2>
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <gazebo reference="wheel_fr">
-    <mu1>1</mu1>
-    <mu2>1</mu2>
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <gazebo reference="wheel_rl">
-    <mu1>1</mu1>
-    <mu2>1</mu2>
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <gazebo reference="wheel_rr">
-    <mu1>1</mu1>
-    <mu2>1</mu2>
-    <material>Gazebo/Black</material>
-  </gazebo>
+  <xacro:macro name="wheel_surface">
+  </xacro:macro>
+    
+  <xacro:macro name="wheel_joint">
+    <dampingFactor>0.02</dampingFactor>
+  </xacro:macro>
+    
+  <xacro:macro name="sub_wheel_surface">
+    <mu1>2</mu1>
+    <mu2>2</mu2>
+    <fdir1>0 0 0</fdir1>
+<!--
+    <dampingFactor>0.7</dampingFactor>
+-->
+  </xacro:macro>
+  
+  <gazebo reference="sub_wheel_fl_1"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_1"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_1"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_1"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_2"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_2"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_2"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_2"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_3"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_3"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_3"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_3"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_4"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_4"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_4"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_4"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_5"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_5"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_5"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_5"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_6"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_6"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_6"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_6"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_7"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_7"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_7"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_7"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_8"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_8"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_8"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_8"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_9"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_9"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_9"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_9"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_10"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_10"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_10"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_10"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_11"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_11"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_11"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_11"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_12"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_12"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_12"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_12"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_13"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_13"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_13"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_13"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_14"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_14"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_14"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_14"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_15"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_15"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_15"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_15"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_16"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_16"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_16"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_16"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_17"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_17"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_17"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_17"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_18"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_18"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_18"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_18"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_19"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_19"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_19"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_19"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fl_20"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_fr_20"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rl_20"><xacro:sub_wheel_surface /></gazebo>
+  <gazebo reference="sub_wheel_rr_20"><xacro:sub_wheel_surface /></gazebo>
+
+  <gazebo reference="wheel_fl"><xacro:wheel_surface /></gazebo>
+  <gazebo reference="wheel_fr"><xacro:wheel_surface /></gazebo>
+  <gazebo reference="wheel_rl"><xacro:wheel_surface /></gazebo>
+  <gazebo reference="wheel_rr"><xacro:wheel_surface /></gazebo>
+  <gazebo reference="base_wheel_fl"><xacro:wheel_joint /></gazebo>
+  <gazebo reference="base_wheel_fr"><xacro:wheel_joint /></gazebo>
+  <gazebo reference="base_wheel_rl"><xacro:wheel_joint /></gazebo>
+  <gazebo reference="base_wheel_rr"><xacro:wheel_joint /></gazebo>
+  
 
 </robot>

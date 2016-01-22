@@ -1,83 +1,59 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="wheel_radius" value="0.025" />
-  <xacro:property name="motor_height" value="0.04" />
-  <xacro:property name="motor_thickness" value="0.02" />
-  <xacro:property name="wheel_thickness" value="0.01" />
-  <xacro:property name="robot_wheel_radius" value="0.08" />
+  <xacro:property name="wheel_radius" value="0.027" />
+  <xacro:property name="wheel_thickness" value="0.015" />
+  <xacro:property name="robot_wheel_radius" value="0.075" />
   
   <xacro:macro name="wheel" params="suffix parent origin_x origin_y rotation">
     
-    <link name="motor_${suffix}">
+    <link name="wheel_${suffix}">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="1" />
-<!--
-        <inertia ixx="5.7332" ixy="0" ixz="0" iyy="5.7332" iyz="0" izz="10.4076" />
--->
-<!--
-        <inertia ixx="0.000016667" ixy="0" ixz="0" iyy="0.000016667" iyz="0" izz="0.000026667" />
--->
-        <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+        <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
+        <mass value="0.10" />
+        <inertia ixx="0.000016" ixy="0" ixz="0" iyy="0.000016" iyz="0" izz="0.000031" />
       </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+      <visual name="wheel-visual" >
+        <origin xyz="0 0 0" rpy="0 1.5707 0" />
         <geometry>
-          <box size="${motor_thickness} ${motor_height} ${motor_height}" />
+          <mesh filename="package://ssl_robot_description/meshes/UBG-Rad.stl"/>
         </geometry>
       </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+      <collision name="wheel">
+        <origin xyz="0.005 0 0" rpy="0 1.5707 0" />
         <geometry>
-          <box size="${motor_thickness} ${motor_height} ${motor_height}" />
+          <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
         </geometry>
       </collision>
     </link>
     
-    <link name="wheel_${suffix}">
+    <link name="motor_${suffix}">
       <inertial>
-        <origin xyz="0 0 0.00" rpy="0 0 0" />
-        <mass value="1" />
-<!--
-        <inertia ixx="5.7332" ixy="0" ixz="0" iyy="5.7332" iyz="0" izz="10.4076" />
--->
-<!--
-        <inertia ixx="0.000016458" ixy="0" ixz="0" iyy="0.000016458" iyz="0" izz="0.000031250" />
--->
-        <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+        <origin xyz="${robot_wheel_radius-wheel_thickness-0.005} 0 ${wheel_radius}" rpy="0 0 0" />
+        <mass value="0.10" />
+        <inertia ixx="0.000042" ixy="0" ixz="0" iyy="0.000022" iyz="0" izz="0.000022" />
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="0 1.5707 0" />
+        <origin xyz="${robot_wheel_radius-wheel_thickness-0.0005} 0 ${wheel_radius}" rpy="0 0 0" />
         <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
+          <box size="0.001 ${wheel_radius*2} ${wheel_radius*2}" />
         </geometry>
       </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 1.5707 0" />
-        <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
-        </geometry>
-      </collision>
     </link>
     
     <joint name="base_wheel_${suffix}" type="continuous">
       <parent link="motor_${suffix}" />
       <child link="wheel_${suffix}" />
       <axis xyz="1 0 0" />
-      <origin xyz="${wheel_thickness/2+motor_thickness/2+0.001} 0 ${-ground_clearance-base_height}" rpy="0 0 0" />
-<!--
-      <dynamics damping="0.7" />
--->
+      <origin xyz="${robot_wheel_radius} 0 ${wheel_radius-ground_clearance}" rpy="0 0 0" />
     </joint>
-    
-    <joint name="base_motor_${suffix}" type="fixed">
+              
+    <joint name="base_motor_${suffix}" type="revolute">
       <parent link="${parent}" />
       <child link="motor_${suffix}" />
-      <axis xyz="1 0 0" />
-      <origin xyz="${origin_x * (robot_wheel_radius-motor_thickness/2-wheel_thickness/2)} 
-                   ${origin_y * (robot_wheel_radius-motor_thickness/2-wheel_thickness/2)} 
-                   ${ground_clearance + over_ground + base_height + motor_height/2}" 
-              rpy="0 0 ${rotation}" />
+      <axis xyz="0 0 1" />
+      <limit effort="30" velocity="1.0" lower="${rotation}" upper="${rotation}" />
+      <origin xyz="0 0 0" 
+              rpy="0 0 0" />
     </joint>
     
     <transmission name="tran_${suffix}">
@@ -85,7 +61,7 @@
       <joint name="base_wheel_${suffix}">
         <hardwareInterface>EffortJointInterface</hardwareInterface>
       </joint>
-      <actuator name="motor_${suffix}">
+      <actuator name="wheel_${suffix}">
         <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>

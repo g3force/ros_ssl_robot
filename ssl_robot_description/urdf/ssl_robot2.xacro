@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot name="ssl_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">  
+  <xacro:property name="ground_clearance" value="0.002" />
+  <xacro:property name="base_height" value="0.145" />
+  <xacro:property name="base_radius" value="0.07" />
+    
+  <xacro:include filename="$(find ssl_robot_description)/urdf/ssl_robot.gazebo" />
+  <xacro:include filename="$(find ssl_robot_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find ssl_robot_description)/urdf/wheel3.xacro" />
+    
+  <link name="base_link">
+  </link>
+    
+  <link name="base_plate">
+   <inertial>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <mass value="2.50" />
+      <inertia ixx="0.005812" ixy="0" ixz="0" iyy="0.005812" iyz="0" izz="0.010125" />
+   </inertial>
+
+<!--
+   <visual>
+     <origin xyz="0 0 ${0.005+ground_clearance}" rpy="0 0 0"/>
+     <geometry>
+       <cylinder radius="${base_radius}" length="0.01"/>
+     </geometry>
+   </visual>
+-->
+   
+   <collision>
+     <origin xyz="0 0 ${0.0005+ground_clearance}" rpy="0 0 0"/>
+     <geometry>
+       <cylinder radius="${base_radius}" length="0.001"/>
+     </geometry>
+   </collision>
+  </link>
+  
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="base_plate" />
+    <axis xyz="1 0 0" />
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+  </joint>
+  
+  <xacro:wheel suffix="fr" parent="base_plate" origin_x="0.5" origin_y="-0.8660" rotation="-1.0472" />
+  <xacro:wheel suffix="fl" parent="base_plate" origin_x="0.5" origin_y="0.8660" rotation="1.0472" />
+  <xacro:wheel suffix="rl" parent="base_plate" origin_x="-0.7071" origin_y="0.7071" rotation="2.3562" />
+  <xacro:wheel suffix="rr" parent="base_plate" origin_x="-0.7071" origin_y="-0.7071" rotation="-2.3562" />
+  
+</robot>

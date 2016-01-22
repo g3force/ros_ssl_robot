@@ -1,49 +1,38 @@
 <?xml version="1.0"?>
-<robot name="ssl_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- Constants for robot dimensions -->
-  <xacro:property name="PI" value="3.1415926535897931" />
-  <xacro:property name="over_ground" value="0.02" />
-  <xacro:property name="platform_height" value="0.015" />
-  <xacro:property name="ground_clearance" value="0.005" />
-  <xacro:property name="base_height" value="0.005" />
-  <xacro:property name="base_radius" value="0.07" />
-  <xacro:property name="robot_height" value="0.15" />
-  
-  <xacro:property name="friction" value="0.2" />
-  
-  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
-  <xacro:include filename="$(find ssl_robot_description)/urdf/ssl_robot.gazebo" />
-  <!-- Import Rviz colors -->
-  <xacro:include filename="$(find ssl_robot_description)/urdf/materials.xacro" />
-  <!-- Import wheel macros -->
-  <xacro:include filename="$(find ssl_robot_description)/urdf/wheel.xacro" />
+<robot name="ssl_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">  
+  <xacro:property name="ground_clearance" value="0.002" />
+  <xacro:property name="base_height" value="0.145" />
+  <xacro:property name="base_radius" value="0.09" />
     
-  <!-- Base Link -->
+  <xacro:include filename="$(find ssl_robot_description)/urdf/ssl_robot.gazebo" />
+  <xacro:include filename="$(find ssl_robot_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find ssl_robot_description)/urdf/wheel2.xacro" />
+    
   <link name="base_link">
   </link>
     
   <link name="base_plate">
    <inertial>
-     <origin xyz="0 0 ${robot_height/2}" rpy="0 0 0"/>
-     <mass value="2.5"/>
+     <origin xyz="0 0 ${base_height/2+ground_clearance-0.02}" rpy="0 0 0"/>
+     <mass value="2.50" />
 <!--
-     <inertia ixx="30.9250"  ixy="-0.2628"  ixz="-0.0222" iyy="33.5471" iyz="0.8517" izz="33.0306" />
+     <inertia ixx="0.0008896" ixy="0" ixz="0" iyy="0.0008896" iyz="0" izz="0.0009031" />
 -->
-     <inertia ixx="0.0097" ixy="0"  ixz="0" iyy="0.0097" iyz="0" izz="0.0101" />
+     <inertia ixx="0.0008896" ixy="0" ixz="0" iyy="0.0008896" iyz="0" izz="0.0009031" />
    </inertial>
 
    <visual>
-     <origin xyz="0 0 ${over_ground+base_height/2+ground_clearance}" rpy="0 0 0" />
+     <origin xyz="0 0 0" rpy="0 0 -1.5707"/>
      <geometry>
+       <mesh filename="package://ssl_robot_description/meshes/HBG-Roboter-now.stl"/>
+<!--
        <cylinder radius="${base_radius}" length="${base_height}"/>
+-->
      </geometry>
-     <material name="Cyan">
-       <color rgba="0 1.0 1.0 1.0"/>
-     </material>
    </visual>
    
    <collision>
-     <origin xyz="0 0 ${over_ground+base_height/2+ground_clearance}" rpy="0 0 0" />
+     <origin xyz="0 0 ${base_height/2+ground_clearance}" rpy="0 0 0"/>
      <geometry>
        <cylinder radius="${base_radius}" length="${base_height}"/>
      </geometry>
@@ -54,31 +43,8 @@
     <parent link="base_link" />
     <child link="base_plate" />
     <axis xyz="1 0 0" />
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
   </joint>
-  
-<!--
-  <link name="platform">
-   <visual>
-     <origin xyz="0 0 ${platform_height/2}" rpy="0 0 0" />
-     <geometry>
-       <cylinder radius="0.05" length="${platform_height}"/>
-     </geometry>
-   </visual>
-   
-   <collision>
-     <origin xyz="0 0 ${platform_height/2}" rpy="0 0 0" />
-     <geometry>
-       <cylinder radius="0.05" length="${platform_height}"/>
-     </geometry>
-   </collision>
-  </link>
-  
-  <joint name="platform_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="platform" />
-    <axis xyz="1 0 0" />
-  </joint>
--->
   
   <xacro:wheel suffix="fr" parent="base_plate" origin_x="0.5" origin_y="-0.8660" rotation="-1.0472" />
   <xacro:wheel suffix="fl" parent="base_plate" origin_x="0.5" origin_y="0.8660" rotation="1.0472" />
