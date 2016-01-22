@@ -197,4 +197,3 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(vel_xyw2SharedRadio src/vel_xyw2SharedRadio.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(vel_xyw2SharedRadio ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})
-add_dependencies(vel_xyw2SharedRadio ssl_robot_comm_generate_messages_cpp)
