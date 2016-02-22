@@ -9,23 +9,23 @@
     <static>false</static>
   </gazebo>
 
-  <gazebo reference="base_link">
-    <material>Gazebo/White</material>
+  <gazebo reference="base_plate">
+    <material>aluminium</material>
   </gazebo>
   
   <xacro:macro name="wheel_surface">
   </xacro:macro>
     
-  <xacro:macro name="wheel_joint">
-    <dampingFactor>0.02</dampingFactor>
-  </xacro:macro>
-    
   <xacro:macro name="sub_wheel_surface">
-    <mu1>2</mu1>
-    <mu2>2</mu2>
+    <material>aluminium</material>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
     <fdir1>0 0 0</fdir1>
 <!--
-    <dampingFactor>0.7</dampingFactor>
+    <kp>1000000.0</kp>
+    <kd>1e-5</kd>
+    <minDepth>0.0001</minDepth>
+    <maxVel>100</maxVel>
 -->
   </xacro:macro>
   
@@ -114,10 +114,6 @@
   <gazebo reference="wheel_fr"><xacro:wheel_surface /></gazebo>
   <gazebo reference="wheel_rl"><xacro:wheel_surface /></gazebo>
   <gazebo reference="wheel_rr"><xacro:wheel_surface /></gazebo>
-  <gazebo reference="base_wheel_fl"><xacro:wheel_joint /></gazebo>
-  <gazebo reference="base_wheel_fr"><xacro:wheel_joint /></gazebo>
-  <gazebo reference="base_wheel_rl"><xacro:wheel_joint /></gazebo>
-  <gazebo reference="base_wheel_rr"><xacro:wheel_joint /></gazebo>
   
 
 </robot>

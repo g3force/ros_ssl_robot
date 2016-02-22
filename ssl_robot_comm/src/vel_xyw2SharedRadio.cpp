@@ -3,7 +3,8 @@
  */
 
 #include "ros/ros.h"
-#include "ssl_robot_msg/vel_xyw.h"
+#include "geometry_msgs/Vector3.h"
+#include "std_msgs/Float64.h"
 
 #include <string>
 #include <arpa/inet.h>
@@ -42,13 +43,13 @@ void FillCommandProtobuf(uint32_t robot_id,
   cmd.set_velocity_r(velocity_r);
 }
 
-void senderCallback(const ssl_robot_msg::vel_xyw::ConstPtr& vel)
+void senderCallback(const geometry_msgs::Vector3::ConstPtr& vel)
 {
   RadioProtocolWrapper wrapper;
   RadioProtocolCommand command;
   std::string buffer;
 
-  FillCommandProtobuf(robot_id, vel->x, vel->y, vel->w, &command);
+  FillCommandProtobuf(robot_id, vel->x, vel->y, vel->z, &command);
   *wrapper.add_command() = command;
   wrapper.SerializeToString(&buffer);
   sendto(socket_fd,

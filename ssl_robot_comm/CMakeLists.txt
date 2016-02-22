@@ -13,7 +13,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  ssl_robot_msg
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -197,3 +197,6 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(vel_xyw2SharedRadio src/vel_xyw2SharedRadio.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(vel_xyw2SharedRadio ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})
+
+add_executable(sharedRadio2vel_xyw src/sharedRadio2vel_xyw.cpp ${PROTO_SRCS} ${PROTO_HDRS})
+target_link_libraries(sharedRadio2vel_xyw ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})

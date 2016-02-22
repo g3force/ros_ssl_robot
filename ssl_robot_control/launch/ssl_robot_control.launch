@@ -4,12 +4,6 @@
   <rosparam file="$(find ssl_robot_control)/config/ssl_robot_control.yaml" command="load"/>
 
   <!-- load the controllers -->
-  <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	output="screen" ns="/ssl_robot" args="joint_state_controller
-					  wheel_fr_position_controller
-					  wheel_fl_position_controller
-					  wheel_rl_position_controller
-					  wheel_rr_position_controller"/>-->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen" ns="/ssl_robot" args="joint_state_controller
 					  wheel_fr_vel_controller

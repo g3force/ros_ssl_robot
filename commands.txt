@@ -1,0 +1,17 @@
+roscore
+
+# create urdf and sdf
+rosrun xacro xacro ssl_robot.xacro > robot.urdf; gz sdf -p robot.urdf > robot.sdf
+
+# gazebo
+vglrun -d :0 roslaunch ssl_robot_gazebo ssl_robot.launch
+roslaunch ssl_robot_gazebo ssl_robot_spawn.launch
+
+# controllers
+# vel to controllers
+rosrun ssl_robot_control vel_xyw2motorCtrl
+# wheel ctrl
+roslaunch ssl_robot_control ssl_robot_control.launch
+# gui
+vglrun -d :0 roslaunch ssl_robot_control ssl_robot_rqt.launch 
+
