@@ -1,0 +1,312 @@
+{
+  "keys": {}, 
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr", 
+          "repr": "{u'rqt_plot/Plot': [6, 5, 4, 3, 2, 1]}"
+        }
+      }, 
+      "groups": {
+        "plugin__rqt_pose_view__PoseView__1": {
+          "keys": {}, 
+          "groups": {
+            "plugin": {
+              "keys": {
+                "view_matrix": {
+                  "type": "repr", 
+                  "repr": "u'[[0.7940183281898499, 0.3351294696331024, -0.5071680545806885, 0.0], [-0.6039025783538818, 0.33945509791374207, -0.7211578488349915, 0.0], [-0.06952068209648132, 0.8788942098617554, 0.4719201326370239, 0.0], [-4.656612873077393e-10, -3.0, -8.5, 1.0]]'"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__1": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/pose/pose/position/x', u'/ssl_robot/raw_state/pose/pose/position/x']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-3.0, 3.0]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[6667.02, 6668.02]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__2": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/twist/twist/linear/x', u'/ssl_robot/raw_vel/twist/linear/x']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-5.0, 5.0]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[8452.241, 8453.241]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__3": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/pose/pose/position/y', u'/ssl_robot/raw_state/pose/pose/position/y']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-3.0, 3.0]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[6670.108999999999, 6671.108999999999]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__4": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/twist/twist/linear/y', u'/ssl_robot/raw_vel/twist/linear/y']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-5.0, 5.0]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[8415.921999999999, 8416.921999999999]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__5": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/pose/pose/orientation/z', u'/ssl_robot/raw_state/pose/pose/orientation/z']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-3.2, 3.2]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[6153.752999999999, 6154.752999999999]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }, 
+        "plugin__rqt_plot__Plot__6": {
+          "keys": {}, 
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "parent": {
+                  "type": "repr", 
+                  "repr": "None"
+                }
+              }, 
+              "groups": {}
+            }, 
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr", 
+                  "repr": "True"
+                }, 
+                "plot_type": {
+                  "type": "repr", 
+                  "repr": "1"
+                }, 
+                "topics": {
+                  "type": "repr", 
+                  "repr": "[u'/ssl_robot/filtered_state/twist/twist/angular/z', u'/ssl_robot/raw_vel/twist/angular/z']"
+                }, 
+                "y_limits": {
+                  "type": "repr", 
+                  "repr": "[-10.0, 10.0]"
+                }, 
+                "x_limits": {
+                  "type": "repr", 
+                  "repr": "[6146.839, 6147.839]"
+                }
+              }, 
+              "groups": {}
+            }
+          }
+        }
+      }
+    }, 
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)", 
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb0001000000000000000000000000077f0000040600000000000000190000077f00000406000000000000')", 
+          "pretty-print": "                       "
+        }, 
+        "state": {
+          "type": "repr(QByteArray.hex)", 
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd000000020000000200000640000000f1fc0100000001fb0000006a007200710074005f0072006f0062006f0074005f007300740065006500720069006e0067005f005f0052006f0062006f0074005300740065006500720069006e0067005f005f0031005f005f0052006f0062006f0074005300740065006500720069006e00670055006901000000000000064000000000000000000000000300000780000003c6fc0100000009fb000000b4007200710074005f006a006f0069006e0074005f007400720061006a006500630074006f00720079005f0063006f006e00740072006f006c006c00650072005f005f004a006f0069006e0074005400720061006a006500630074006f007200790043006f006e00740072006f006c006c00650072005f005f0031005f005f004a006f0069006e0074005400720061006a006500630074006f007200790043006f006e00740072006f006c006c00650072005500690100000000000002290000000000000000fb00000050007200710074005f0061006300740069006f006e005f005f0041006300740069006f006e0050006c007500670069006e005f005f0031005f005f006d0065007300730061006700650073002e0075006901000000000000032c0000000000000000fb0000005c00760069006300740069006d005f006400690061006c006f0067005f005f00560069006300740069006d004400690061006c006f0067005f005f0031005f005f00560069006300740069006d004400690061006c006f00670055006901000000000000032c0000000000000000fb00000068007300750070006500720076006900730069006f006e005f006700750069005f005f005300750070006500720076006900730069006f006e004700750069005f005f0031005f005f005300750070006500720076006900730069006f006e004700750069005500690100000142000001ea0000000000000000fc00000000000002610000011900fffffffc0200000003fc00000014000000e70000000000fffffffc0100000003fb00000050007200710074005f0070006f00730065005f0076006900650077005f005f0050006f007300650056006900650077005f005f0031005f005f0047004c00560069006500770057006900640067006500740100000000000003900000000000000000fb00000058007200710074005f007000750062006c00690073006800650072005f005f005000750062006c00690073006800650072005f005f0031005f005f005000750062006c006900730068006500720057006900640067006500740100000000000006260000000000000000fb0000006c007200710074005f007200650063006f006e006600690067007500720065005f005f0050006100720061006d005f005f0032005f005f005f0070006c007500670069006e0063006f006e007400610069006e00650072005f0074006f0070005f007700690064006700650074010000062c000001540000000000000000fb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0031005f005f00440061007400610050006c006f00740057006900640067006500740100000014000001d50000008400fffffffb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0032005f005f00440061007400610050006c006f007400570069006400670065007401000001ef000001eb0000008400fffffffb0000006c007200710074005f007200650063006f006e006600690067007500720065005f005f0050006100720061006d005f005f0031005f005f005f0070006c007500670069006e0063006f006e007400610069006e00650072005f0074006f0070005f00770069006400670065007401000006550000012b0000000000000000fb00000042007200710074005f006e00610076005f0076006900650077005f005f004e0061007600690067006100740069006f006e0056006900650077005f005f0031005f005f010000055a000000e60000000000000000fc000002670000028e0000011900fffffffc0200000002fb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0033005f005f00440061007400610050006c006f00740057006900640067006500740100000014000001d30000008400fffffffb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0034005f005f00440061007400610050006c006f007400570069006400670065007401000001ed000001ed0000008400fffffffc000004fb000002850000011900fffffffc0200000002fb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0035005f005f00440061007400610050006c006f00740057006900640067006500740100000014000001da0000008400fffffffb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0036005f005f00440061007400610050006c006f007400570069006400670065007401000001f4000001e60000008400ffffff000007800000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')", 
+          "pretty-print": "                 jrqt_robot_steering__RobotSteering__1__RobotSteeringUi                    rqt_joint_trajectory_controller__JointTrajectoryController__1__JointTrajectoryControllerUi          Prqt_action__ActionPlugin__1__messages.ui          \\victim_dialog__VictimDialog__1__VictimDialogUi          hsupervision_gui__SupervisionGui__1__SupervisionGuiUi            a                    Prqt_pose_view__PoseView__1__GLViewWidget          Xrqt_publisher__Publisher__1__PublisherWidget          lrqt_reconfigure__Param__2___plugincontainer_top_widget          Brqt_plot__Plot__1__DataPlotWidget          Brqt_plot__Plot__2__DataPlotWidget          lrqt_reconfigure__Param__1___plugincontainer_top_widget          Brqt_nav_view__NavigationView__1__          g                                                                                                              Brqt_plot__Plot__5__DataPlotWidget          Brqt_plot__Plot__6__DataPlotWidget                            6MinimizedDockWidgetsToolbar        "
+        }
+      }, 
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr", 
+              "repr": "8"
+            }
+          }, 
+          "groups": {}
+        }
+      }
+    }
+  }
+}
