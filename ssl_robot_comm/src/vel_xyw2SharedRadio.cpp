@@ -62,11 +62,11 @@ void senderCallback(const geometry_msgs::Vector3::ConstPtr& vel)
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "ssl_robot_setvel_listener_real");
+  ros::init(argc, argv, "ssl_robot_sharedRadio_client");
 
   ros::param::param<int>("robot_id", robot_id, 0);
-  std::string server_name;
-  ros::param::param<std::string>("server_name", server_name, "192.168.20.254");
+  std::string server_name = "192.168.20.210";
+  ros::param::param<std::string>("server_name", server_name, "192.168.20.210");
   int port_number = 10010;
 
   socket_fd = socket(AF_INET, SOCK_DGRAM, 0);

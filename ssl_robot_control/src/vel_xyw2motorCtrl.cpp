@@ -21,49 +21,47 @@ double wheel_radius = 0.025;
 
 using namespace std;
 
-static double degToRad(double b)
-{
+static double degToRad(double b) {
 	return b * PI / 180.0;
 }
 
-void senderCallback(const geometry_msgs::Vector3::ConstPtr& vel)
-{
-  // fr, rr, rl, fl
-  for(int i=0;i<4;i++)
-  {
-    double w = (
-              -sin(theta[i]) * vel->x
-             + cos(theta[i]) * vel->y
-             + bot_radius * vel->z
-           ) * -1.0/wheel_radius;
-    std_msgs::Float64 msg;
-    msg.data = w;
-    ctrl_pub[i].publish(msg);
-    ros::spinOnce();
-  }
+void senderCallback(const geometry_msgs::Vector3::ConstPtr& vel) {
+	// fr, rr, rl, fl
+	for (int i = 0; i < 4; i++) {
+		double w = (-sin(theta[i]) * vel->x + cos(theta[i]) * vel->y
+				+ bot_radius * vel->z) * -1.0 / wheel_radius;
+		std_msgs::Float64 msg;
+		msg.data = w;
+		ctrl_pub[i].publish(msg);
+		ros::spinOnce();
+	}
 }
 
-int main(int argc, char **argv)
-{
-  ros::init(argc, argv, "ssl_robot_setvel_listener_sim");
-  
-  double alpha = degToRad(60);
-  double beta = degToRad(45);
-  theta[0] = -alpha;
-  theta[1] = alpha;
-  theta[2] = PI - beta;
-  theta[3] = PI + beta;
+int main(int argc, char **argv) {
+	ros::init(argc, argv, "ssl_robot_control");
 
-  ros::NodeHandle n;
+	double alpha = degToRad(60);
+	double beta = degToRad(45);
+	theta[0] = -alpha;
+	theta[1] = alpha;
+	theta[2] = PI - beta;
+	theta[3] = PI + beta;
 
-  ctrl_pub[0] = n.advertise<std_msgs::Float64>("/ssl_robot/wheel_fr_vel_controller/command", 1);
-  ctrl_pub[1] = n.advertise<std_msgs::Float64>("/ssl_robot/wheel_fl_vel_controller/command", 1);
-  ctrl_pub[2] = n.advertise<std_msgs::Float64>("/ssl_robot/wheel_rl_vel_controller/command", 1);
-  ctrl_pub[3] = n.advertise<std_msgs::Float64>("/ssl_robot/wheel_rr_vel_controller/command", 1);
-  
-  ros::Subscriber sub = n.subscribe("/ssl_robot/set_vel_xyw", 1, senderCallback);
+	ros::NodeHandle n;
 
-  ros::spin();
+	ctrl_pub[0] = n.advertise<std_msgs::Float64>(
+			"/ssl_robot/wheel_fr_vel_controller/command", 1);
+	ctrl_pub[1] = n.advertise<std_msgs::Float64>(
+			"/ssl_robot/wheel_fl_vel_controller/command", 1);
+	ctrl_pub[2] = n.advertise<std_msgs::Float64>(
+			"/ssl_robot/wheel_rl_vel_controller/command", 1);
+	ctrl_pub[3] = n.advertise<std_msgs::Float64>(
+			"/ssl_robot/wheel_rr_vel_controller/command", 1);
 
-  return 0;
+	ros::Subscriber sub = n.subscribe("/ssl_robot/set_vel_xyw", 1,
+			senderCallback);
+
+	ros::spin();
+
+	return 0;
 }

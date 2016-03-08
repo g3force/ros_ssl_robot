@@ -14,6 +14,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  ssl_robot_msgs
 )
 
 ## System dependencies are found with CMake's conventions

@@ -14,7 +14,6 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(vel_xyw2motorCtrl src/vel_xyw2motorCtrl.cpp)
 target_link_libraries(vel_xyw2motorCtrl ${catkin_LIBRARIES})
-#add_dependencies(vel_xyw2motorCtrl geometry_generate_messages_cpp)
 
 install(DIRECTORY config
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

@@ -2,9 +2,9 @@
 #define MULTICAST_IP "224.5.23.3"
 
 #include "ros/ros.h"
+#include "ssl_robot_msgs/State.h"
 
 #include "sumatra_wf_export.pb.h"
-#include "ssl_robot_msg/vel_xyw.h"
 
 #include <string>
 #include <iostream>
@@ -14,7 +14,7 @@
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
 
-ros::Publisher vision_pub;
+ros::Publisher pub_state;
 
 boost::thread* recv_thread = NULL;
 boost::asio::io_service io_service;
@@ -44,7 +44,7 @@ static void handle_receive_from(const boost::system::error_code& error,
 						boost::asio::placeholders::error,
 						boost::asio::placeholders::bytes_transferred));
 	} else {
-    ROS_ERROR_STREAM(error.message());
+		ROS_ERROR_STREAM(error.message());
 	}
 }
   
@@ -76,18 +76,25 @@ static void onPacketReceived(char* data, size_t dataSize)
                 wpe::Bot bot = wf.bots().Get(i);
 
                 if(bot.id() == robot_id
-                        && (bot.teamcolor() == wpe::BLUE && robot_team_color == "B"
-                            || bot.teamcolor() == wpe::YELLOW && robot_team_color == "Y")
+                        && (((bot.teamcolor() == wpe::BLUE) && (robot_team_color == "B"))
+                            || ((bot.teamcolor() == wpe::YELLOW) && (robot_team_color == "Y")))
                         )
                 {
-                    ssl_robot_msg::vel_xyw msg;
+                    ssl_robot_msgs::State state;
+//                    state.t = ros::Time(wf.timestamp());
+                    state.t = ros::Time::now();
                     double normAngle = normalizeAngle(M_PI / 2 - bot.pos().z());
-                    msg.x = (bot.vel().x() * cos(normAngle)) - (bot.vel().y() * sin(normAngle));
-                    msg.y = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
-                    msg.x = bot.vel().x();
-                    msg.y = bot.vel().y();
-                    msg.w = bot.vel().z();
-                    vision_pub.publish(msg);
+                    state.local_vel_y = -((bot.vel().x() * cos(normAngle)) - (bot.vel().y() * sin(normAngle)));
+                    state.local_vel_x = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
+                    state.local_vel_w = bot.vel().z();
+
+                    state.global_vel_x = bot.vel().x();
+                    state.global_vel_y = bot.vel().y();
+                    state.global_vel_w = bot.vel().z();
+                    state.global_pos_x = bot.pos().x();
+                    state.global_pos_y = bot.pos().y();
+                    state.global_pos_w = bot.pos().z();
+                    pub_state.publish(state);
                     break;
                 }
             }
@@ -100,11 +107,10 @@ static void onPacketReceived(char* data, size_t dataSize)
 
 int main(int argc, char **argv)
 {
-  ROS_INFO("Starting...");
-  ros::init(argc, argv, "ssl_robot_wf_receiver");
+  ros::init(argc, argv, "sumatra_wf_receiver");
   
   ros::NodeHandle n;
-  vision_pub = n.advertise<ssl_robot_msg::vel_xyw>("/ssl_robot/state_vel", 1);
+  pub_state = n.advertise<ssl_robot_msgs::State>("/ssl_robot/state", 1);
 
   ros::param::param<int>("robot_id", robot_id, 0);
   ros::param::param<std::string>("robot_team_color", robot_team_color, "Y");
@@ -126,7 +132,6 @@ int main(int argc, char **argv)
 
   ros::spin();
   
-  ROS_INFO("Stopping...");
   io_service.stop();
 	if(recv_thread != NULL) {
 		delete recv_thread;

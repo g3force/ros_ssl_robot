@@ -37,10 +37,13 @@ void PrintRadioCommand(const RadioProtocolCommand& cmd) {
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "ssl_robot_sharedRadio_listener_real");
+  ros::init(argc, argv, "ssl_robot_sharedRadio_server");
+
+  std::string recv_node = "/ssl_robot";
+  recv_node = "/ssl_robot_affw";
 
   ros::NodeHandle n;
-  ros::Publisher pub = n.advertise<geometry_msgs::Vector3>("/ssl_robot/set_vel_xyw", 1);
+  ros::Publisher pub = n.advertise<geometry_msgs::Vector3>(recv_node + "/set_vel_xyw", 1);
   
   int port_number = 10010;
   int socket_fd = 0;
@@ -96,7 +99,7 @@ int main(int argc, char **argv)
     }
   }
 
-  ros::spin();
+  ros::shutdown();
 
   return 0;
 }
