@@ -14,6 +14,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   geometry_msgs
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -200,3 +201,6 @@ target_link_libraries(vel_xyw2SharedRadio ${catkin_LIBRARIES} ${PROTOBUF_LIBRARI
 
 add_executable(sharedRadio2vel_xyw src/sharedRadio2vel_xyw.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(sharedRadio2vel_xyw ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})
+
+add_executable(joy2vel_xyw src/joy2vel_xyw.cpp)
+target_link_libraries(joy2vel_xyw ${catkin_LIBRARIES})

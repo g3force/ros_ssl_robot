@@ -106,6 +106,8 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 	q.setY(p.orientation.y);
 	q.setZ(p.orientation.z);
 	q.setW(p.orientation.w);
+	q = q.inverse();
+//	q.setRPY(0,0,0);
 	transform.setRotation(q);
 	br.sendTransform(
 			tf::StampedTransform(transform, time, "ssl_robot_odom",

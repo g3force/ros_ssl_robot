@@ -4,7 +4,7 @@
  */
 
 #include "ros/ros.h"
-#include "geometry_msgs/Vector3.h"
+#include "geometry_msgs/Twist.h"
 #include "std_msgs/Float64.h"
 
 #include <string>
@@ -25,11 +25,11 @@ static double degToRad(double b) {
 	return b * PI / 180.0;
 }
 
-void senderCallback(const geometry_msgs::Vector3::ConstPtr& vel) {
+void senderCallback(const geometry_msgs::Twist::ConstPtr& vel) {
 	// fr, rr, rl, fl
 	for (int i = 0; i < 4; i++) {
-		double w = (-sin(theta[i]) * vel->x + cos(theta[i]) * vel->y
-				+ bot_radius * vel->z) * -1.0 / wheel_radius;
+		double w = (-sin(theta[i]) * vel->linear.x + cos(theta[i]) * vel->linear.y
+				+ bot_radius * vel->angular.z) * -1.0 / wheel_radius;
 		std_msgs::Float64 msg;
 		msg.data = w;
 		ctrl_pub[i].publish(msg);
@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
 	ctrl_pub[3] = n.advertise<std_msgs::Float64>(
 			"/ssl_robot/wheel_rr_vel_controller/command", 1);
 
-	ros::Subscriber sub = n.subscribe("/ssl_robot/set_vel_xyw", 1,
+	ros::Subscriber sub = n.subscribe("cmd_vel", 1,
 			senderCallback);
 
 	ros::spin();

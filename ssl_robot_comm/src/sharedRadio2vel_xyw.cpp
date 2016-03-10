@@ -3,8 +3,7 @@
  */
 
 #include "ros/ros.h"
-#include "geometry_msgs/Vector3.h"
-#include "std_msgs/Float64.h"
+#include "geometry_msgs/Twist.h"
 
 #include <string>
 #include <arpa/inet.h>
@@ -39,11 +38,8 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "ssl_robot_sharedRadio_server");
 
-  std::string recv_node = "/ssl_robot";
-  recv_node = "/ssl_robot_affw";
-
   ros::NodeHandle n;
-  ros::Publisher pub = n.advertise<geometry_msgs::Vector3>(recv_node + "/set_vel_xyw", 1);
+  ros::Publisher pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
   
   int port_number = 10010;
   int socket_fd = 0;
@@ -84,10 +80,10 @@ int main(int argc, char **argv)
       for (int i = 0; i < num_robots; ++i) {
         //~ PrintRadioCommand(radio_message.command(i));
         
-        geometry_msgs::Vector3 vec;
-        vec.x = radio_message.command(i).velocity_x();
-        vec.y = radio_message.command(i).velocity_y();
-        vec.z = radio_message.command(i).velocity_r();
+        geometry_msgs::Twist vec;
+        vec.linear.x = radio_message.command(i).velocity_x();
+        vec.linear.y = radio_message.command(i).velocity_y();
+        vec.angular.z = radio_message.command(i).velocity_r();
         pub.publish(vec);
         ros::spinOnce();
         

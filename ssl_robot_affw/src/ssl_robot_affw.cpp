@@ -17,7 +17,7 @@
 #include "ssl_robot_msgs/Target.h"
 #include "ssl_robot_msgs/State.h"
 
-#include "geometry_msgs/Vector3.h"
+#include "geometry_msgs/Twist.h"
 #include "affw_ctrl/State.h"
 #include "affw_ctrl/ActionRequest.h"
 
@@ -34,10 +34,10 @@ void setVelCallback(const ssl_robot_msgs::Target::ConstPtr& vel) {
 	srv.request.setPoint.push_back(vel->vel_w);
 
 	if (srv_action.call(srv)) {
-		geometry_msgs::Vector3 outVel;
-		outVel.x = srv.response.outVel[0];
-		outVel.y = srv.response.outVel[1];
-		outVel.z = srv.response.outVel[2];
+		geometry_msgs::Twist outVel;
+		outVel.linear.x = srv.response.outVel[0];
+		outVel.linear.y = srv.response.outVel[1];
+		outVel.angular.z = srv.response.outVel[2];
 
 		pub_set_vel.publish(outVel);
 		ros::spinOnce();
@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
 	ros::NodeHandle n;
 
 	// send velocity to robot
-	pub_set_vel = n.advertise<geometry_msgs::Vector3>("/ssl_robot/set_vel_xyw",
+	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel",
 			1);
 	// send robot state to affw
 	pub_fdbk_state = n.advertise<affw_ctrl::State>("/affw_ctrl/state", 1);
