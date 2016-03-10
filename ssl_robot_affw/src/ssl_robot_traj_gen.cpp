@@ -29,6 +29,8 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
+	ros::Duration(2).sleep();
+
 	ros::ServiceClient srv_action;
 	srv_action = n.serviceClient<affw_ctrl::ActionRequest>("/affw_ctrl/action");
 	bool avail = srv_action.waitForExistence();
