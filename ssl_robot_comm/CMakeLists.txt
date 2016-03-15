@@ -204,3 +204,6 @@ target_link_libraries(sharedRadio2vel_xyw ${catkin_LIBRARIES} ${PROTOBUF_LIBRARI
 
 add_executable(joy2vel_xyw src/joy2vel_xyw.cpp)
 target_link_libraries(joy2vel_xyw ${catkin_LIBRARIES})
+
+add_executable(joy2vel_xyw_smooth src/joy2vel_xyw_smooth.cpp)
+target_link_libraries(joy2vel_xyw_smooth ${catkin_LIBRARIES})

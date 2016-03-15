@@ -199,3 +199,7 @@ add_dependencies(ssl_robot_affw ssl_robot_msgs_gencpp)
 add_executable(ssl_robot_traj_gen src/ssl_robot_traj_gen.cpp)
 target_link_libraries(ssl_robot_traj_gen ${catkin_LIBRARIES})
 add_dependencies(ssl_robot_traj_gen ssl_robot_msgs_gencpp)
+
+add_executable(export_data src/export_data.cpp)
+target_link_libraries(export_data ${catkin_LIBRARIES})
+add_dependencies(export_data ssl_robot_msgs_gencpp)

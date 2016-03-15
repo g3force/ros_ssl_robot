@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- Load RQT with a pre-setup GUI for Baxter controls from a perspective file  -->
+  <node name="ssl_robot_feedback_gaz_rqt" pkg="rqt_gui" type="rqt_gui" respawn="false"
+	output="screen" args="--perspective-file $(find ssl_robot_feedback_gaz)/launch/fdbk_gaz.perspective"/>
+  
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+	<param name="joy/deadzone" value="0.33" />
+	<node name="joy" pkg="joy" type="joy_node" output="screen" />
+	<node name="ssl_robot_joy" pkg="ssl_robot_comm" type="joy2vel_xyw_smooth" output="screen" />
+	
+    <node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />
+</launch>

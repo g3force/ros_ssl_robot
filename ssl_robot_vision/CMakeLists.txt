@@ -195,3 +195,4 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(sumatra_wf_receiver src/sumatra_wf_receiver.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(sumatra_wf_receiver ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})
+add_dependencies(sumatra_wf_receiver ssl_robot_msgs_gencpp)

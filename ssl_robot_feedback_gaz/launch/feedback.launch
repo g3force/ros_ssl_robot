@@ -1,0 +1,6 @@
+<launch>
+  	<include file="$(find ssl_robot_feedback_gaz)/launch/ukf.launch" />
+	
+	<node name="ssl_robot_feedback_gaz" pkg="ssl_robot_feedback_gaz" type="ssl_robot_feedback_gaz" output="screen" />
+	
+</launch>
