@@ -26,7 +26,7 @@ ros::Publisher pub_state;
 ros::Publisher pub_raw_state;
 ros::Publisher pub_raw_vel;
 
-std::ofstream fRawPose, fRawTwist, fFiltered, fSet;
+std::ofstream fRawPose, fRawTwist, fFiltered, fSet, fTarget;
 
 double getOrientation(geometry_msgs::Quaternion gq) {
 	double ow = gq.w;
@@ -95,6 +95,13 @@ void callbackSet(const geometry_msgs::Twist::ConstPtr& twist) {
 			<< twist->linear.y << " " << twist->angular.z << std::endl;
 }
 
+void callbackTarget(const geometry_msgs::TwistStamped::ConstPtr& twist) {
+
+	fTarget << std::fixed << std::setw(11) << std::setprecision(6)
+			<< ros::Time::now().toSec() << " " << twist->twist.linear.x << " "
+			<< twist->twist.linear.y << " " << twist->twist.angular.z << std::endl;
+}
+
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_export_data");
 	ros::NodeHandle n;
@@ -112,10 +119,12 @@ int main(int argc, char **argv) {
 	std::string rawTwistFile = folder + "/raw_twist.csv";
 	std::string filteredFile = folder + "/filtered.csv";
 	std::string setpointFile = folder + "/set.csv";
+	std::string targetFile = folder + "/target.csv";
 	fRawPose.open(rawPoseFile.c_str());
 	fRawTwist.open(rawTwistFile.c_str());
 	fFiltered.open(filteredFile.c_str());
 	fSet.open(setpointFile.c_str());
+	fTarget.open(targetFile.c_str());
 
 	ros::Subscriber sub_filtered = n.subscribe("/ssl_robot/filtered_state", 1,
 			callbackFiltered);
@@ -124,6 +133,7 @@ int main(int argc, char **argv) {
 	ros::Subscriber sub_raw_twist = n.subscribe("/ssl_robot/raw_twist", 1,
 			callbackRawTwist);
 	ros::Subscriber sub_set = n.subscribe("/cmd_vel", 1, callbackSet);
+	ros::Subscriber sub_target = n.subscribe("/ssl_robot_affw/target_vel", 1, callbackTarget);
 
 	ros::spin();
 
@@ -131,6 +141,7 @@ int main(int argc, char **argv) {
 	fRawTwist.close();
 	fFiltered.close();
 	fSet.close();
+	fTarget.close();
 
 	return 0;
 }
