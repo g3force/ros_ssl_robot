@@ -45,7 +45,7 @@ int findModel(std::vector<std::string> name) {
 
 
 void callbackFilterStates(const nav_msgs::Odometry::ConstPtr& odo) {
-	nav_msgs::Odometry state;
+	nav_msgs::Odometry state = *odo;
 	pub_state.publish(state);
 	ros::spinOnce();
 }
@@ -67,7 +67,8 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 	transform.setOrigin(tf::Vector3(p.position.x, p.position.y, 0.0));
 	double angle = getOrientation(p.orientation);
 	tf::Quaternion q;
-	q.setRPY(0, 0, angle);
+//	q.setRPY(0, 0, angle);
+	q.setRPY(0,0,0);
 	transform.setRotation(q);
 	br.sendTransform(
 			tf::StampedTransform(transform, time, "odom",
@@ -111,9 +112,9 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 			twist.twist = lastTwist.twist;
 		}
 
-		twist.twist.covariance.elems[0] = 0.01;
-		twist.twist.covariance.elems[6 + 1] = 0.01;
-		twist.twist.covariance.elems[5 * 6 + 5] = 0.001;
+		twist.twist.covariance.elems[0] = 0.1;
+		twist.twist.covariance.elems[6 + 1] = 0.1;
+		twist.twist.covariance.elems[5 * 6 + 5] = 0.1;
 	} else {
 		lastPose = pose;
 		lastTwist = twist;
