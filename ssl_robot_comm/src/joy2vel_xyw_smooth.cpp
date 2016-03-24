@@ -5,23 +5,34 @@
  *      Author: Nicolai Ommer <nicolai.ommer@gmail.com>
  */
 
-#include "ros/ros.h"
-#include "geometry_msgs/Twist.h"
-#include "sensor_msgs/Joy.h"
+#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/TwistStamped.h>
+#include <geometry_msgs/Vector3.h>
+#include <ros/duration.h>
+#include <ros/init.h>
+#include <ros/node_handle.h>
+#include <ros/param.h>
+#include <ros/publisher.h>
+#include <ros/subscriber.h>
+#include <ros/time.h>
+#include <rosconsole/macros_generated.h>
+#include <sensor_msgs/Joy.h>
+#include <std_msgs/Header.h>
+#include <cmath>
+#include <string>
+#include <assert.h>
 
-ros::Publisher pub_vel;
-geometry_msgs::Twist curVel;
 geometry_msgs::Twist targetVel;
 
 double vDef = 1;
-double vMax = 5;
-double dccDef = 3;
+double vMax = 3;
+double dccDef = 2;
 double dccMax = 6;
-double accDef = 3;
-double accMax = 6;
-double rotateDef = 10;
-double rotateMax = 20;
-double rotateMin = 5;
+double accDef = 2;
+double accMax = 4;
+double rotateDef = 5;
+double rotateMax = 10;
+double rotateMin = 1;
 
 double uDcc = 0;
 double uAcc = 0;
@@ -61,14 +72,50 @@ double angleBetweenVectorAndVector(double v1x, double v1y, double v2x, double v2
 
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_joy");
-
 	ros::NodeHandle n;
-	pub_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
+
+	bool affw = false;
+	ros::param::param<double>("vDef", vDef, vDef);
+	ros::param::param<double>("vMax", vMax, vMax);
+	ros::param::param<double>("dccDef", dccDef, dccDef);
+	ros::param::param<double>("dccMax", dccMax, dccMax);
+	ros::param::param<double>("accDef", accDef, accDef);
+	ros::param::param<double>("accMax", accMax, accMax);
+	ros::param::param<double>("rotateDef", rotateDef, rotateDef);
+	ros::param::param<double>("rotateMax", rotateMax, rotateMax);
+	ros::param::param<double>("rotateMin", rotateMin, rotateMin);
+	ros::param::param<bool>("affw", affw, affw);
+
+//	std::string affwOpt = "";
+//	if(argc > 1)
+//		affwOpt = argv[1];
+//
+//	bool affw = (affwOpt == "-affw");
+
+	// affw enabled?
+	if(affw)
+		ROS_INFO("affw enabled");
+	else
+		ROS_INFO("affw disabled");
+
+	std::string topic;
+	if(affw)
+		topic = "/ssl_robot_affw/target_vel";
+	else
+		topic = "/cmd_vel";
+
+	ros::Publisher pub_vel;
+	if(affw)
+		pub_vel = n.advertise<geometry_msgs::TwistStamped>(topic, 1);
+	else
+		pub_vel = n.advertise<geometry_msgs::Twist>(topic, 1);
 
 	ros::Subscriber sub_joy = n.subscribe("/joy", 1,
 			callbackJoy);
 
+	geometry_msgs::Twist curVel;
 	double dt = 0.01;
+	int seq = 0;
 	while(ros::ok())
 	{
 		double acc;
@@ -102,7 +149,16 @@ int main(int argc, char **argv) {
 
 		curVel.angular.z = targetVel.angular.z;
 
-		pub_vel.publish(curVel);
+		if(affw)
+		{
+			geometry_msgs::TwistStamped curVelStamp;
+			curVelStamp.header.frame_id = "base_link";
+			curVelStamp.header.seq = seq++;
+			curVelStamp.header.stamp = ros::Time::now();
+			curVelStamp.twist = curVel;
+			pub_vel.publish(curVelStamp);
+		} else
+			pub_vel.publish(curVel);
 		ros::spinOnce();
 
 		ros::Duration(dt).sleep();
