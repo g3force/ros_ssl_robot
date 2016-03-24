@@ -8,12 +8,8 @@
     <link name="sub_wheel_${suffix}">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
-<!--
-        <mass value="0.1000" />
-        <inertia ixx="0.0002500521" ixy="0" ixz="0" iyy="0.0002500521" iyz="0" izz="0.0005000000" />
--->
-        <mass value="0.1000" />
-        <inertia ixx="0.0000625521" ixy="0" ixz="0" iyy="0.0000625521" iyz="0" izz="0.0001250000" />
+        <mass value="0.010" />
+        <inertia ixx="0.000000111" ixy="0" ixz="0" iyy="0.000000111" iyz="0" izz="0.000000211" />
       </inertial>
       
       <collision>

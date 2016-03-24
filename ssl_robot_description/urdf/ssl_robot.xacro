@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="ssl_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">  
   <xacro:property name="ground_clearance" value="0.002" />
-  <xacro:property name="base_height" value="0.15" />
+  <xacro:property name="base_height" value="0.138" />
   <xacro:property name="base_radius" value="0.09" />
     
   <xacro:include filename="$(find ssl_robot_description)/urdf/ssl_robot.gazebo" />
@@ -13,13 +13,9 @@
     
   <link name="base_plate">
    <inertial>
-      <origin xyz="0 0 ${base_height/2+ground_clearance}" rpy="0 0 0"/>
-<!--
-      <mass value="1.00" />
-      <inertia ixx="0.001233" ixy="0" ixz="0" iyy="0.001233" iyz="0" izz="0.002450" />
--->
-      <mass value="5.00" />
-      <inertia ixx="0.015500" ixy="0" ixz="0" iyy="0.015500" iyz="0" izz="0.012250" />
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <mass value="34.0" />
+      <inertia ixx="0.15500" ixy="0" ixz="0" iyy="0.15500" iyz="0" izz="0.12250" />
    </inertial>
 
    <visual>

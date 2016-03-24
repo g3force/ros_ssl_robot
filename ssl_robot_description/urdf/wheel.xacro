@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="wheel_radius" value="0.025" />
+  <xacro:property name="wheel_radius" value="0.027" />
   <xacro:property name="wheel_thickness" value="0.015" />
   <xacro:property name="robot_wheel_radius" value="0.075" />
   
@@ -11,12 +11,8 @@
     <link name="wheel_${suffix}">
       <inertial>
         <origin xyz="${wheel_thickness/2} 0 0" rpy="0 1.5707 0" />
-<!--
-        <mass value="0.5000" />
-        <inertia ixx="0.0003218750" ixy="0" ixz="0" iyy="0.0003218750" iyz="0" izz="0.0006250000" />
--->
-        <mass value="0.5000" />
-        <inertia ixx="0.0012593750" ixy="0" ixz="0" iyy="0.0012593750" iyz="0" izz="0.0025000000" />
+        <mass value="0.8000" />
+        <inertia ixx="0.012593750" ixy="0" ixz="0" iyy="0.012593750" iyz="0" izz="0.025000000" />
       </inertial>
       
       <visual>
@@ -26,12 +22,14 @@
         </geometry>
       </visual>
       
+<!--
       <collision>
         <origin xyz="${wheel_thickness/2} 0 0" rpy="0 1.5707 0" />
         <geometry>
           <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
         </geometry>
       </collision>
+-->
     </link>
     
     <joint name="base_wheel_${suffix}" type="continuous">
