@@ -1,0 +1,6 @@
+<launch>
+  <node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />  
+  <node name="ssl_robot_traj_gen" pkg="ssl_robot_affw" type="ssl_robot_traj_gen" required="true" output="screen" args="/tmp/traj.csv" />
+  
+  <node name="export_data" pkg="ssl_robot_affw" type="export_data" output="screen" />
+</launch>

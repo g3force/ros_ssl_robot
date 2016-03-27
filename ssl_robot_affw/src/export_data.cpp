@@ -5,28 +5,36 @@
  *      Author: Nicolai Ommer <nicolai.ommer@gmail.com>
  */
 
-#include "ros/ros.h"
-
-#include <iostream>
+#include <affw_ctrl/TargetRequest.h>
+#include <geometry_msgs/Point.h>
+#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseWithCovariance.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
+#include <geometry_msgs/Quaternion.h>
+#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/TwistStamped.h>
+#include <geometry_msgs/TwistWithCovariance.h>
+#include <geometry_msgs/TwistWithCovarianceStamped.h>
+#include <geometry_msgs/Vector3.h>
+#include <nav_msgs/Odometry.h>
+#include <ros/init.h>
+#include <ros/node_handle.h>
+#include <ros/publisher.h>
+#include <ros/subscriber.h>
+#include <ros/time.h>
+#include <std_msgs/Header.h>
+#include <tf/LinearMath/Matrix3x3.h>
+#include <tf/LinearMath/Quaternion.h>
 #include <fstream>
 #include <iomanip>
-
-#include "nav_msgs/Odometry.h"
-#include "geometry_msgs/PoseWithCovarianceStamped.h"
-#include "geometry_msgs/TwistWithCovarianceStamped.h"
-#include <tf/transform_broadcaster.h>
-#include <tf/transform_listener.h>
-
-#include "gazebo_msgs/ModelStates.h"
-
-#include <tf/transform_datatypes.h>
-#include <angles/angles.h>
+#include <iostream>
+#include <string>
 
 ros::Publisher pub_state;
 ros::Publisher pub_raw_state;
 ros::Publisher pub_raw_vel;
 
-std::ofstream fRawPose, fRawTwist, fFiltered, fSet, fTarget;
+std::ofstream fRawPose, fRawTwist, fFiltered, fSet, fTarget, fAffw;
 
 double getOrientation(geometry_msgs::Quaternion gq) {
 	double ow = gq.w;
@@ -102,6 +110,22 @@ void callbackTarget(const geometry_msgs::TwistStamped::ConstPtr& twist) {
 			<< twist->twist.linear.y << " " << twist->twist.angular.z << std::endl;
 }
 
+void callbackAffw(const affw_ctrl::TargetRequest::ConstPtr& tr) {
+
+	fAffw << std::fixed << std::setw(11) << std::setprecision(6)
+			<< tr->header.stamp.toSec();
+	for(int i=0;i<tr->state.size();i++)
+		fAffw << " " << tr->state[i];
+	for(int i=0;i<tr->target.size();i++)
+		fAffw << " " << tr->target[i];
+	for(int i=0;i<tr->action.size();i++)
+		fAffw << " " << tr->action[i];
+	for(int i=0;i<tr->actionComp.size();i++)
+		fAffw << " " << tr->actionComp[i];
+
+	fAffw << std::endl;
+}
+
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_export_data");
 	ros::NodeHandle n;
@@ -120,11 +144,13 @@ int main(int argc, char **argv) {
 	std::string filteredFile = folder + "/filtered.csv";
 	std::string setpointFile = folder + "/set.csv";
 	std::string targetFile = folder + "/target.csv";
+	std::string affwFile = folder + "/affw.csv";
 	fRawPose.open(rawPoseFile.c_str());
 	fRawTwist.open(rawTwistFile.c_str());
 	fFiltered.open(filteredFile.c_str());
 	fSet.open(setpointFile.c_str());
 	fTarget.open(targetFile.c_str());
+	fAffw.open(affwFile.c_str());
 
 	ros::Subscriber sub_filtered = n.subscribe("/ssl_robot/filtered_state", 1,
 			callbackFiltered);
@@ -134,6 +160,7 @@ int main(int argc, char **argv) {
 			callbackRawTwist);
 	ros::Subscriber sub_set = n.subscribe("/cmd_vel", 1, callbackSet);
 	ros::Subscriber sub_target = n.subscribe("/ssl_robot_affw/target_vel", 1, callbackTarget);
+	ros::Subscriber sub_affw = n.subscribe("/affw_ctrl/target_request", 1, callbackAffw);
 
 	ros::spin();
 
@@ -142,6 +169,7 @@ int main(int argc, char **argv) {
 	fFiltered.close();
 	fSet.close();
 	fTarget.close();
+	fAffw.close();
 
 	return 0;
 }

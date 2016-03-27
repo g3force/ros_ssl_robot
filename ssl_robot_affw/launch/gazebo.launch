@@ -1,0 +1,5 @@
+<launch>
+  <node name="ssl_robot_affw" pkg="ssl_robot_affw" type="ssl_robot_affw" output="screen" />
+  <node name="affw_ctrl" pkg="affw_ctrl" type="affw_ctrl" output="screen" />
+  
+</launch>

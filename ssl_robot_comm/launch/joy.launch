@@ -12,7 +12,7 @@
 	<param name="rotateDef" value="5" />
 	<param name="rotateMax" value="10" />
 	<param name="rotateMin" value="1" />
-	<param name="affw" value="false" />
+	<param name="affw" value="true" />
 	
     <node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />
 </launch>

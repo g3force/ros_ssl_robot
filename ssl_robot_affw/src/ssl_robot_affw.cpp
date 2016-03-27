@@ -5,33 +5,32 @@
  *      Author: NicolaiO
  */
 
-#include <iostream>
-
-#include "ros/ros.h"
-#include "ros/time.h"
-
-#include "std_msgs/MultiArrayLayout.h"
-#include "std_msgs/MultiArrayDimension.h"
-#include "std_msgs/Float32MultiArray.h"
-
-#include "ssl_robot_msgs/Target.h"
-#include "ssl_robot_msgs/State.h"
-
-#include "geometry_msgs/Twist.h"
-#include "affw_ctrl/State.h"
-#include "affw_ctrl/ActionRequest.h"
+#include <affw_ctrl/ActionRequest.h>
+#include <affw_ctrl/State.h>
+#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/TwistStamped.h>
+#include <geometry_msgs/TwistWithCovariance.h>
+#include <geometry_msgs/Vector3.h>
+#include <nav_msgs/Odometry.h>
+#include <ros/init.h>
+#include <ros/node_handle.h>
+#include <ros/publisher.h>
+#include <ros/service_client.h>
+#include <ros/subscriber.h>
+#include <rosconsole/macros_generated.h>
+#include <vector>
 
 ros::Publisher pub_set_vel;
 ros::Publisher pub_fdbk_state;
 ros::ServiceClient srv_action;
 
-void setVelCallback(const ssl_robot_msgs::Target::ConstPtr& vel) {
+void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 
 	affw_ctrl::ActionRequest srv;
-	srv.request.t = vel->t;
-	srv.request.setPoint.push_back(vel->vel_x);
-	srv.request.setPoint.push_back(vel->vel_y);
-	srv.request.setPoint.push_back(vel->vel_w);
+	srv.request.header = vel->header;
+	srv.request.setPoint.push_back(vel->twist.linear.x);
+	srv.request.setPoint.push_back(vel->twist.linear.y);
+	srv.request.setPoint.push_back(vel->twist.angular.z);
 
 	if (srv_action.call(srv)) {
 		geometry_msgs::Twist outVel;
@@ -46,18 +45,12 @@ void setVelCallback(const ssl_robot_msgs::Target::ConstPtr& vel) {
 	}
 }
 
-void feedbackVelCallback(const ssl_robot_msgs::State::ConstPtr& vel) {
+void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& vel) {
 	affw_ctrl::State state;
-	state.t = vel->t;
-	state.local_vel.push_back(vel->local_vel_x);
-	state.local_vel.push_back(vel->local_vel_y);
-	state.local_vel.push_back(vel->local_vel_w);
-	state.global_vel.push_back(vel->global_vel_x);
-	state.global_vel.push_back(vel->global_vel_y);
-	state.global_vel.push_back(vel->global_vel_w);
-	state.global_pos.push_back(vel->global_pos_x);
-	state.global_pos.push_back(vel->global_pos_y);
-	state.global_pos.push_back(vel->global_pos_w);
+	state.header = vel->header;
+	state.vel.push_back(vel->twist.twist.linear.x);
+	state.vel.push_back(vel->twist.twist.linear.y);
+	state.vel.push_back(vel->twist.twist.angular.z);
 
 	pub_fdbk_state.publish(state);
 	ros::spinOnce();
@@ -68,14 +61,15 @@ int main(int argc, char **argv) {
 	ros::NodeHandle n;
 
 	// send velocity to robot
-	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel",
-			1);
+	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
+
 	// send robot state to affw
 	pub_fdbk_state = n.advertise<affw_ctrl::State>("/affw_ctrl/state", 1);
 
 	// receive velocity cmd from external source
 	ros::Subscriber sub_set_vel = n.subscribe("/ssl_robot_affw/target_vel", 1,
 			setVelCallback);
+
 	// receive robot state from robot
 	ros::Subscriber sub_fdbk_vel = n.subscribe("/ssl_robot/state", 1,
 			feedbackVelCallback);

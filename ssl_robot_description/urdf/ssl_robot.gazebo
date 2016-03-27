@@ -18,8 +18,8 @@
     
   <xacro:macro name="sub_wheel_surface">
     <material>aluminium</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
     <fdir1>0 0 0</fdir1>
     <maxContacts>1</maxContacts>
     <kp>800000.0</kp>
