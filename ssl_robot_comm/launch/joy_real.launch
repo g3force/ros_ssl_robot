@@ -1,7 +1,6 @@
 <launch>
 	<param name="joy/deadzone" value="0.33" />
 	<node name="joy" pkg="joy" type="joy_node" output="screen" />
-	<node name="ssl_robot_joy" pkg="ssl_robot_comm" type="joy2vel_xyw_smooth" output="screen" />
 	
 	<param name="vDef" value="1" />
 	<param name="vMax" value="3" />
@@ -12,7 +11,10 @@
 	<param name="rotateDef" value="5" />
 	<param name="rotateMax" value="10" />
 	<param name="rotateMin" value="1" />
-	<param name="affw" value="true" />
+	<param name="affw" value="false" />
+	<node name="ssl_robot_joy" pkg="ssl_robot_comm" type="joy2vel_xyw_smooth" output="screen" />
 	
-    <node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />
+	<param name="robot_id" value="5" />
+	<param name="server_name" value="192.168.20.210" />
+    <node name="vel_xyw2SharedRadio" pkg="ssl_robot_comm" type="vel_xyw2SharedRadio" output="screen" />
 </launch>
