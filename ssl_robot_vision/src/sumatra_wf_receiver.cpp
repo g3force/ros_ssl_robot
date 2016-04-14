@@ -2,7 +2,7 @@
 #define MULTICAST_IP "224.5.23.3"
 
 #include "ros/ros.h"
-#include "ssl_robot_msgs/State.h"
+#include "nav_msgs/Odometry.h"
 
 #include "sumatra_wf_export.pb.h"
 
@@ -13,6 +13,8 @@
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
+
+#include <tf/transform_datatypes.h>
 
 ros::Publisher pub_state;
 
@@ -25,6 +27,7 @@ enum {
   max_length = 32768
 };
 char data_[max_length];
+int seq = 0;
 
 int robot_id;
 std::string robot_team_color;
@@ -80,21 +83,24 @@ static void onPacketReceived(char* data, size_t dataSize)
                             || ((bot.teamcolor() == wpe::YELLOW) && (robot_team_color == "Y")))
                         )
                 {
-                    ssl_robot_msgs::State state;
-//                    state.t = ros::Time(wf.timestamp());
-                    state.t = ros::Time::now();
-                    double normAngle = normalizeAngle(M_PI / 2 - bot.pos().z());
-                    state.local_vel_y = -((bot.vel().x() * cos(normAngle)) - (bot.vel().y() * sin(normAngle)));
-                    state.local_vel_x = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
-                    state.local_vel_w = bot.vel().z();
+                	nav_msgs::Odometry odom;
+                	odom.header.frame_id = "odom";
+                	odom.header.seq = seq++;
+                	odom.header.stamp = ros::Time::now();
+                	odom.pose.pose.position.x = bot.pos().x();
+                	odom.pose.pose.position.y = bot.pos().y();
+                	tf::Quaternion q;
+                	q.setRPY(0,0,bot.pos().z());
+                	odom.pose.pose.orientation.w = q.getW();
+                	odom.pose.pose.orientation.x = q.getX();
+                	odom.pose.pose.orientation.y = q.getY();
+                	odom.pose.pose.orientation.z = q.getZ();
 
-                    state.global_vel_x = bot.vel().x();
-                    state.global_vel_y = bot.vel().y();
-                    state.global_vel_w = bot.vel().z();
-                    state.global_pos_x = bot.pos().x();
-                    state.global_pos_y = bot.pos().y();
-                    state.global_pos_w = bot.pos().z();
-                    pub_state.publish(state);
+                    double normAngle = normalizeAngle(M_PI / 2 - bot.pos().z());
+                	odom.twist.twist.linear.x = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
+                	odom.twist.twist.linear.y = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
+                	odom.twist.twist.angular.z = bot.vel().z();
+                    pub_state.publish(odom);
                     break;
                 }
             }
@@ -110,7 +116,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "sumatra_wf_receiver");
   
   ros::NodeHandle n;
-  pub_state = n.advertise<ssl_robot_msgs::State>("/ssl_robot/state", 1);
+  pub_state = n.advertise<nav_msgs::Odometry>("/ssl_robot/state", 1);
 
   ros::param::param<int>("robot_id", robot_id, 0);
   ros::param::param<std::string>("robot_team_color", robot_team_color, "Y");
