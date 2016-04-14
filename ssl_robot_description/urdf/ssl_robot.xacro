@@ -13,13 +13,12 @@
     
   <link name="base_plate">
    <inertial>
-      <origin xyz="0 0 ${base_height/2+ground_clearance}" rpy="0 0 0"/>
-<!--
-      <mass value="1.00" />
-      <inertia ixx="0.001233" ixy="0" ixz="0" iyy="0.001233" iyz="0" izz="0.002450" />
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+<!--		<mass value="5.00" />
+		<inertia ixx="0.121875" ixy="0" ixz="0" iyy="0.121875" iyz="0" izz="0.225000" />
 -->
-      <mass value="5.00" />
-      <inertia ixx="0.015500" ixy="0" ixz="0" iyy="0.015500" iyz="0" izz="0.012250" />
+		<mass value="3.669" />
+		<inertia ixx="0.012646186" ixy="-0.000204481" ixz="-0.000024516" iyy="0.014053275" iyz="-0.000015230" izz="0.015508810" />
    </inertial>
 
    <visual>
@@ -43,6 +42,7 @@
     <axis xyz="1 0 0" />
     <origin xyz="0 0 0.01" rpy="0 0 0" />
   </joint>
+  
   
   <xacro:wheel suffix="fr" parent="base_plate" origin_x="0.5" origin_y="-0.8660" rotation="-1.0472" />
   <xacro:wheel suffix="fl" parent="base_plate" origin_x="0.5" origin_y="0.8660" rotation="1.0472" />
