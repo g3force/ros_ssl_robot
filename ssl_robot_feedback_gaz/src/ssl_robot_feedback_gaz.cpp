@@ -25,6 +25,7 @@
 
 #include "AngleMath.h"
 
+bool enableFilter = false;
 ros::Publisher pub_state;
 ros::Publisher pub_raw_pose;
 ros::Publisher pub_raw_twist;
@@ -84,7 +85,6 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 	pose.pose.covariance.elems[6 + 1] = 0.0001;
 	pose.pose.covariance.elems[5 * 6 + 5] = 0.0005;
 	pub_raw_pose.publish(pose);
-	ros::spinOnce();
 
 	// convert twist
 	geometry_msgs::TwistWithCovarianceStamped twist;
@@ -94,7 +94,7 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 	if (lastPose.header.seq != 0) {
 		ros::Duration tDiff = pose.header.stamp - lastPose.header.stamp;
 		double dt = tDiff.toSec();
-		if (dt > 0) {
+		if (dt > 0.001) {
 			double vx = (pose.pose.pose.position.x
 					- lastPose.pose.pose.position.x) / dt;
 			double vy = (pose.pose.pose.position.y
@@ -112,21 +112,34 @@ void callbackModelStates(const gazebo_msgs::ModelStates::ConstPtr& states) {
 			twist.twist = lastTwist.twist;
 		}
 
-		twist.twist.covariance.elems[0] = 0.1;
-		twist.twist.covariance.elems[6 + 1] = 0.1;
-		twist.twist.covariance.elems[5 * 6 + 5] = 0.1;
+		twist.twist.covariance.elems[0] = 0.001;
+		twist.twist.covariance.elems[6 + 1] = 0.001;
+		twist.twist.covariance.elems[5 * 6 + 5] = 0.001;
 	} else {
 		lastPose = pose;
 		lastTwist = twist;
 	}
 
 	pub_raw_twist.publish(twist);
+
+	if(!enableFilter) {
+		// send raw data as state
+		nav_msgs::Odometry odo;
+		odo.header = twist.header;
+		odo.child_frame_id = "odom";
+		odo.pose = pose.pose;
+		odo.twist = twist.twist;
+		pub_state.publish(odo);
+	}
+
 	ros::spinOnce();
 }
 
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_feedback_gaz");
 	ros::NodeHandle n;
+
+	ros::param::get("enableFilter", enableFilter);
 
 	ros::Time time;
 	do {
@@ -135,8 +148,12 @@ int main(int argc, char **argv) {
 
 	ros::Subscriber sub_model_states = n.subscribe("/gazebo/model_states", 1,
 			callbackModelStates);
-	ros::Subscriber sub_filter_states = n.subscribe("/ssl_robot/filtered_state",
+	ros::Subscriber sub_filter_states;
+	if(enableFilter)
+	{
+		sub_filter_states = n.subscribe("/ssl_robot/filtered_state",
 			1, callbackFilterStates);
+	}
 
 	pub_raw_pose = n.advertise<geometry_msgs::PoseWithCovarianceStamped>(
 			"/ssl_robot/raw_pose", 1);

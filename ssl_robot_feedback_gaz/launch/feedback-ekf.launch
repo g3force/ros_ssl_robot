@@ -1,0 +1,7 @@
+<launch>
+  	<include file="$(find ssl_robot_feedback_gaz)/launch/ekf.launch" />
+	
+	<param name="enableFilter" value="true" />
+	<node name="ssl_robot_feedback_gaz" pkg="ssl_robot_feedback_gaz" type="ssl_robot_feedback_gaz" output="screen" />
+	
+</launch>
