@@ -29,6 +29,7 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include <boost/filesystem.hpp>
 
 ros::Publisher pub_state;
 ros::Publisher pub_raw_state;
@@ -130,9 +131,11 @@ int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_export_data");
 	ros::NodeHandle n;
 
-	std::string folder = "/tmp";
+	std::string folder = "/tmp/ssl_robot_data";
 	if (argc > 1)
 		folder = argv[1];
+
+	boost::filesystem::create_directories(folder);
 
 	ros::Time time;
 	do {
@@ -152,7 +155,7 @@ int main(int argc, char **argv) {
 	fTarget.open(targetFile.c_str());
 	fAffw.open(affwFile.c_str());
 
-	ros::Subscriber sub_filtered = n.subscribe("/ssl_robot/filtered_state", 1,
+	ros::Subscriber sub_filtered = n.subscribe("/ssl_robot/state", 1,
 			callbackFiltered);
 	ros::Subscriber sub_raw_pose = n.subscribe("/ssl_robot/raw_pose", 1,
 			callbackRawPose);
