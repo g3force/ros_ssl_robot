@@ -45,11 +45,11 @@ int main(int argc, char **argv) {
 	std::vector<geometry_msgs::TwistStamped> setpoints;
 	std::ifstream file(filename);
 	while(ros::Time::now().isZero());
-	ros::Time now = ros::Time::now();
+	ros::Time tStart = ros::Time::now();
 	double t, vx, vy, vw;
 	while (file >> t >> vx >> vy >> vw) {
 		geometry_msgs::TwistStamped vel;
-		vel.header.stamp = now + ros::Duration(t);
+		vel.header.stamp = tStart + ros::Duration(t);
 		vel.header.frame_id = "base_link";
 		vel.twist.linear.x = vx;
 		vel.twist.linear.y = vy;
@@ -61,12 +61,11 @@ int main(int argc, char **argv) {
 	do {
 		pub_set_vel.publish(*it);
 		std::cout << it->header.stamp << " " << it->twist.linear.x << " " << it->twist.linear.y << " " << it->twist.angular.z << std::endl;
-		ros::Time t1 = it->header.stamp;
 		it++;
 		if(it < setpoints.end())
 		{
-			ros::Time t2 = it->header.stamp;
-			ros::Duration diff = t2-t1;
+			ros::Time tNext = it->header.stamp;
+			ros::Duration diff = tNext - ros::Time::now();
 			diff.sleep();
 		}
 		else
@@ -75,8 +74,9 @@ int main(int argc, char **argv) {
 		}
 	} while(ros::ok());
 
+	// send zero vel to ensure robot is getting stopped
 	geometry_msgs::TwistStamped vel;
-	vel.header.stamp = now + ros::Duration(t);
+	vel.header.stamp = tStart + ros::Duration(t);
 	vel.header.frame_id = "base_link";
 	pub_set_vel.publish(vel);
 
