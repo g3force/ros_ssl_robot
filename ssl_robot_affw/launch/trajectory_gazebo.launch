@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find ssl_robot_affw)/launch/trajectory.launch" />
+	
+	<node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />
+</launch>

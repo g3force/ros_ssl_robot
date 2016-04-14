@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find ssl_robot_affw)/launch/trajectory.launch" />
+	
+	<param name="robot_id" value="5" />
+	<param name="server_name" value="192.168.20.210" />
+    <node name="vel_xyw2SharedRadio" pkg="ssl_robot_comm" type="vel_xyw2SharedRadio" output="screen" />
+</launch>
