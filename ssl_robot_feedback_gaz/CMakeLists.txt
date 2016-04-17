@@ -200,3 +200,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 add_executable(ssl_robot_feedback_gaz src/ssl_robot_feedback_gaz.cpp)
 target_link_libraries(ssl_robot_feedback_gaz ${catkin_LIBRARIES} AngleMath)
 add_dependencies(ssl_robot_feedback_gaz ssl_robot_msgs_gencpp)
+
+add_executable(ssl_robot_feedback_gaz_p3d src/ssl_robot_feedback_gaz_p3d.cpp)
+target_link_libraries(ssl_robot_feedback_gaz_p3d ${catkin_LIBRARIES} AngleMath)
+add_dependencies(ssl_robot_feedback_gaz_p3d ssl_robot_msgs_gencpp)

@@ -1,0 +1,6 @@
+<launch>
+	
+	<param name="enableFilter" value="false" />
+	<node name="ssl_robot_feedback_gaz_p3d" pkg="ssl_robot_feedback_gaz" type="ssl_robot_feedback_gaz_p3d" output="screen" />
+	
+</launch>
