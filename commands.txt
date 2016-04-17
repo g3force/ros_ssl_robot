@@ -15,3 +15,15 @@ roslaunch ssl_robot_control ssl_robot_control.launch
 # gui
 vglrun -d :0 roslaunch ssl_robot_control ssl_robot_rqt.launch 
 
+
+roslaunch ssl_robot_vision vision_receiver.launch
+roslaunch ssl_robot_feedback_gaz feedback-ukf.launch
+
+roslaunch ssl_robot_comm joy_gazebo.launch
+
+roslaunch ssl_robot_affw affw_ssl.launch
+
+roslaunch ssl_robot_affw trajectory_real.launch
+
+
+
