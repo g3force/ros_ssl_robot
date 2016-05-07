@@ -96,10 +96,12 @@ static void onPacketReceived(char* data, size_t dataSize)
                 	odom.pose.pose.orientation.y = q.getY();
                 	odom.pose.pose.orientation.z = q.getZ();
 
-                    double normAngle = normalizeAngle(M_PI / 2 - bot.pos().z());
-                	odom.twist.twist.linear.x = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
-                	odom.twist.twist.linear.y = (bot.vel().y() * cos(normAngle)) + (bot.vel().x() * sin(normAngle));
+//                    double normAngle = normalizeAngle(M_PI / 2 - bot.pos().z());
+                    double normAngle = -bot.pos().z();
+                	odom.twist.twist.linear.x = (bot.vel().x() * cos(normAngle)) - (bot.vel().y() * sin(normAngle));
+                	odom.twist.twist.linear.y = (bot.vel().x() * sin(normAngle)) + (bot.vel().y() * cos(normAngle));
                 	odom.twist.twist.angular.z = bot.vel().z();
+
                     pub_state.publish(odom);
                     break;
                 }

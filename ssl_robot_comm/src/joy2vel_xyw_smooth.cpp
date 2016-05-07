@@ -100,7 +100,7 @@ int main(int argc, char **argv) {
 
 	std::string topic;
 	if(affw)
-		topic = "/ssl_robot_affw/target_vel";
+		topic = "/affw_ctrl/target_vel";
 	else
 		topic = "/cmd_vel";
 

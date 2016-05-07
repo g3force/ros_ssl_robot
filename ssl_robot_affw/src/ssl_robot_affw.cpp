@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 	pub_fdbk_state = n.advertise<affw_ctrl::State>("/affw_ctrl/state", 1);
 
 	// receive velocity cmd from external source
-	ros::Subscriber sub_set_vel = n.subscribe("/ssl_robot_affw/target_vel", 1,
+	ros::Subscriber sub_set_vel = n.subscribe("/affw_ctrl/target_vel", 1,
 			setVelCallback);
 
 	// receive robot state from robot

@@ -62,25 +62,39 @@ void senderCallback(const geometry_msgs::Twist::ConstPtr& vel)
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "ssl_robot_sharedRadio_client");
+	ros::init(argc, argv, "ssl_robot_sharedRadio_client");
 
-  ros::param::param<int>("robot_id", robot_id, 0);
-  std::string server_name = "192.168.20.210";
-  ros::param::param<std::string>("server_name", server_name, "192.168.20.210");
-  int port_number = 10010;
+	ros::param::param<int>("robot_id", robot_id, 0);
+	std::string server_name = "192.168.20.210";
+	ros::param::param<std::string>("server_name", server_name, "192.168.20.210");
+	int port_number = 10010;
 
-  socket_fd = socket(AF_INET, SOCK_DGRAM, 0);
+	socket_fd = socket(AF_INET, SOCK_DGRAM, 0);
 
-  bzero(&server_address, sizeof(server_address));
-  server_address.sin_family = AF_INET;
-  server_address.sin_addr.s_addr = inet_addr(server_name.c_str());
-  server_address.sin_port = htons(port_number);
+	bzero(&server_address, sizeof(server_address));
+	server_address.sin_family = AF_INET;
+	server_address.sin_addr.s_addr = inet_addr(server_name.c_str());
+	server_address.sin_port = htons(port_number);
 
-  ros::NodeHandle n;
+	ros::NodeHandle n;
 
-  ros::Subscriber sub = n.subscribe("/cmd_vel", 1, senderCallback);
+	ros::Subscriber sub = n.subscribe("/cmd_vel", 1, senderCallback);
 
-  ros::spin();
+	ros::spin();
 
-  return 0;
+	RadioProtocolWrapper wrapper;
+	RadioProtocolCommand command;
+	std::string buffer;
+
+	FillCommandProtobuf(robot_id, 0, 0, 0, &command);
+	*wrapper.add_command() = command;
+	wrapper.SerializeToString(&buffer);
+	sendto(socket_fd,
+	   buffer.data(),
+	   buffer.length(),
+	   0,
+	   reinterpret_cast<sockaddr*>(&server_address),
+	   sizeof(server_address));
+
+	return 0;
 }
