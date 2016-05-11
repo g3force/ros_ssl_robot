@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <package>
-  <name>ssl_robot_gazebo</name>
-  <version>0.0.0</version>
-  <description>The ssl_robot_gazebo package</description>
+  <name>ssl_robot_real</name>
+  <version>1.0.0</version>
+  <description>Start up scripts for real robot</description>
 
   <maintainer email="nicolai.ommer@gmail.com">Nicolai Ommer</maintainer>
 
   <license>BSD</license>
+
   <buildtool_depend>catkin</buildtool_depend>
 </package>

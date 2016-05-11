@@ -1,26 +1,18 @@
 <?xml version="1.0"?>
 <package>
-  <name>ssl_robot_affw</name>
+  <name>ssl_robot_transform</name>
   <version>1.0.0</version>
-  <description>Wrapper between ssl robot and adaptive ffw controller</description>
+  <description>Transform from global to local frame</description>
 
   <maintainer email="nicolai.ommer@gmail.com">Nicolai Ommer</maintainer>
 
-
   <license>BSD</license>
 
-
   <buildtool_depend>catkin</buildtool_depend>
-  
   <build_depend>roscpp</build_depend>
-  <build_depend>affw_msgs</build_depend>
   <build_depend>nav_msgs</build_depend>
   <build_depend>tf</build_depend>
-  
   <run_depend>roscpp</run_depend>
-  <run_depend>affw_msgs</run_depend>
   <run_depend>nav_msgs</run_depend>
   <run_depend>tf</run_depend>
-  <run_depend>affw_ctrl</run_depend>
-
 </package>

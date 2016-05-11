@@ -1,6 +1,0 @@
-<launch>	
-	<param name="use_sim_time" value="false" />
-	<param name="robot_id" value="10" />
-	<param name="robot_team_color" value="Y" />
-    <node name="sumatra_wf_receiver" pkg="ssl_robot_vision" type="sumatra_wf_receiver" output="screen" />
-</launch>

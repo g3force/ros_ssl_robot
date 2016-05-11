@@ -5,8 +5,8 @@
  *      Author: NicolaiO
  */
 
-#include <affw_ctrl/ActionRequest.h>
-#include <affw_ctrl/State.h>
+#include <affw_msgs/ActionRequest.h>
+#include <affw_msgs/State.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/TwistStamped.h>
 #include <geometry_msgs/TwistWithCovariance.h>
@@ -18,6 +18,11 @@
 #include <ros/service_client.h>
 #include <ros/subscriber.h>
 #include <rosconsole/macros_generated.h>
+#include <std_msgs/Header.h>
+#include <tf/LinearMath/Vector3.h>
+#include <tf/transform_datatypes.h>
+#include <tf/transform_listener.h>
+#include <string>
 #include <vector>
 
 ros::Publisher pub_set_vel;
@@ -26,7 +31,7 @@ ros::ServiceClient srv_action;
 
 void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 
-	affw_ctrl::ActionRequest srv;
+	affw_msgs::ActionRequest srv;
 	srv.request.header = vel->header;
 	srv.request.setPoint.push_back(vel->twist.linear.x);
 	srv.request.setPoint.push_back(vel->twist.linear.y);
@@ -45,12 +50,18 @@ void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 	}
 }
 
-void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& vel) {
-	affw_ctrl::State state;
-	state.header = vel->header;
-	state.vel.push_back(vel->twist.twist.linear.x);
-	state.vel.push_back(vel->twist.twist.linear.y);
-	state.vel.push_back(vel->twist.twist.angular.z);
+void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& odom) {
+
+	tf::Quaternion fromQuat;
+	tf::quaternionMsgToTF(odom->pose.pose.orientation, fromQuat);
+	double angle = -fromQuat.getAngle();
+	geometry_msgs::Vector3 velIn = odom->twist.twist.linear;
+	affw_msgs::State state;
+	state.header = odom->header;
+	state.header.frame_id = "base_link";
+	state.vel.push_back(velIn.x * cos(angle) - velIn.y * sin(angle));
+	state.vel.push_back(velIn.x * sin(angle) + velIn.y * cos(angle));
+	state.vel.push_back(odom->twist.twist.angular.z);
 
 	pub_fdbk_state.publish(state);
 	ros::spinOnce();
@@ -64,17 +75,17 @@ int main(int argc, char **argv) {
 	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
 
 	// send robot state to affw
-	pub_fdbk_state = n.advertise<affw_ctrl::State>("/affw_ctrl/state", 1);
+	pub_fdbk_state = n.advertise<affw_msgs::State>("/affw_ctrl/state", 1);
 
 	// receive velocity cmd from external source
 	ros::Subscriber sub_set_vel = n.subscribe("/affw_ctrl/target_vel", 1,
 			setVelCallback);
 
 	// receive robot state from robot
-	ros::Subscriber sub_fdbk_vel = n.subscribe("/ssl_robot/state", 1,
+	ros::Subscriber sub_fdbk_vel = n.subscribe("/odom", 1,
 			feedbackVelCallback);
 
-	srv_action = n.serviceClient<affw_ctrl::ActionRequest>("/affw_ctrl/action");
+	srv_action = n.serviceClient<affw_msgs::ActionRequest>("/affw_ctrl/action");
 
 	ros::spin();
 

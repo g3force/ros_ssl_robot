@@ -10,8 +10,6 @@ catkin_package(
   CATKIN_DEPENDS roscpp
 )
 
-include_directories(include ${catkin_INCLUDE_DIRS})
-
 add_executable(vel_xyw2motorCtrl src/vel_xyw2motorCtrl.cpp)
 target_link_libraries(vel_xyw2motorCtrl ${catkin_LIBRARIES})
 

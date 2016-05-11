@@ -1,9 +1,0 @@
-<launch>
-	<arg name="export" default="false" />
-	
-	<include file="$(find ssl_robot_affw)/launch/trajectory_base.launch">
-		<arg name="export" value="$(arg export)" />
-	</include>
-	
-	<node name="ssl_robot_control" pkg="ssl_robot_control" type="vel_xyw2motorCtrl" output="screen" />
-</launch>

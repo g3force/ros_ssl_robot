@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>ssl_robot_2dnav</name>
+  <version>0.0.0</version>
+  <description>The ssl_robot_2dnav package</description>
+
+  <maintainer email="nicolai.ommer@gmail.com">Nicolai Ommer</maintainer>
+
+
+  <license>BSD</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>move_base</build_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>move_base</run_depend>
+  <run_depend>move_base_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+
+</package>

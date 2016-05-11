@@ -1,0 +1,33 @@
+controller_frequency: 10
+recovery_behaviour_enabled: true
+
+DWAPlannerROS:
+  # robot configuration parameters
+  acc_lim_x: 4
+  acc_lim_th: 10
+  max_trans_vel: 2
+  min_trans_vel: 0.05
+  max_vel_x: 2
+  min_vel_x: 0.05
+  max_rot_vel: 5
+  min_rot_vel: 0.1
+
+  max_vel_y: 1.5
+  min_vel_y: 0.05
+  acc_lim_y: 3
+
+  # goal tolerance
+  yaw_goal_tolerance: 0.2
+  xy_goal_tolerance: 0.2
+
+  # forward simulation
+  sim_time: 0.5
+  vx_samples: 4
+  vy_samples: 0
+  vtheta_samples: 10
+  sim_granularity: 0.1
+  angular_sim_granularity: 0.1
+  penalize_negative_x: false
+
+  # weights
+  occdist_scale: 10

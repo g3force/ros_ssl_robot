@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ssl_robot_gazebo)
+project(ssl_robot_real)
 
 find_package(catkin REQUIRED)
 

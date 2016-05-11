@@ -5,16 +5,6 @@
 		<arg name="paused" value="false" />
 	</include>
 	  
-	<!-- Convert an xacro and put on parameter server -->
-	<param name="robot_description" command="$(find xacro)/xacro.py $(find ssl_robot_description)/urdf/ssl_robot.xacro" />
-	
-	<!-- Spawn a robot into Gazebo -->
-	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model ssl_robot" />
-	  
-	<!-- Start wheel controllers -->
-	<include file="$(find ssl_robot_control)/launch/ssl_robot_control.launch" />
-	
-	<!-- Start feedback node -->
-	<include file="$(find ssl_robot_feedback_gaz)/launch/feedback-p3d.launch" />
+	<include file="$(find ssl_robot_gazebo)/launch/ssl_robot_spawn.launch" />
 	
 </launch>
