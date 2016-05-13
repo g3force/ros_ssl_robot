@@ -28,8 +28,11 @@
 ros::Publisher pub_set_vel;
 ros::Publisher pub_fdbk_state;
 ros::ServiceClient srv_action;
+ros::Time lastSetVelTime;
 
 void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
+
+	lastSetVelTime = ros::Time::now();
 
 	affw_msgs::ActionRequest srv;
 	srv.request.header = vel->header;
@@ -46,7 +49,7 @@ void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 		pub_set_vel.publish(outVel);
 		ros::spinOnce();
 	} else {
-		ROS_ERROR("Failed to get action from affw");
+		ROS_ERROR_THROTTLE(1, "Failed to get action from affw");
 	}
 }
 
@@ -67,9 +70,22 @@ void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& odom) {
 	ros::spinOnce();
 }
 
+void timerCallback(const ros::TimerEvent&)
+{
+	ros::Duration diff = ros::Time::now() - lastSetVelTime;
+	if(diff.toSec() > 0.2 && diff.toSec() < 0.4)
+	{
+		geometry_msgs::Twist outVel;
+		pub_set_vel.publish(outVel);
+		ros::spinOnce();
+	}
+}
+
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "ssl_robot_affw");
 	ros::NodeHandle n;
+
+	lastSetVelTime = ros::Time::now();
 
 	// send velocity to robot
 	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
@@ -86,6 +102,8 @@ int main(int argc, char **argv) {
 			feedbackVelCallback);
 
 	srv_action = n.serviceClient<affw_msgs::ActionRequest>("/affw_ctrl/action");
+
+	ros::Timer timer = n.createTimer(ros::Duration(0.1), timerCallback);
 
 	ros::spin();
 
