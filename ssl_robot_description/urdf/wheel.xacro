@@ -37,12 +37,10 @@
       <child link="wheel_${suffix}" />
       <axis xyz="1 0 0" />
       <origin xyz="${robot_wheel_radius*origin_x} ${robot_wheel_radius*origin_y} ${wheel_radius-ground_clearance}" rpy="0 0 ${rotation}" />
-      <dynamics damping="0.01" friction="0.0" />
+      <dynamics damping="0.05" friction="0.0" />
       <!-- (3m/s / 2*pi*r) * 2 * pi -> 3m/s / r-->
-<!--
       <limit lower="0" upper="0"
-             effort="1" velocity="${3/wheel_radius}" />
--->
+             effort="5" velocity="${3/wheel_radius}" />
     </joint>
                   
     <xacro:sub_wheel suffix="${suffix}_1" parent="wheel_${suffix}" origin_x="${(wheel_radius-0.005)*1.000000}" origin_y="${(wheel_radius-0.005)*0.000000}" rotation="0.000000" />

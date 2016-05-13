@@ -3,31 +3,33 @@ recovery_behaviour_enabled: true
 
 DWAPlannerROS:
   # robot configuration parameters
-  acc_lim_x: 4
+  acc_lim_x: 3
   acc_lim_th: 10
   max_trans_vel: 2
-  min_trans_vel: 0.05
+  min_trans_vel: 0.01
   max_vel_x: 2
-  min_vel_x: 0.05
-  max_rot_vel: 5
+  min_vel_x: 0.01
+  max_rot_vel: 10
   min_rot_vel: 0.1
 
   max_vel_y: 1.5
-  min_vel_y: 0.05
-  acc_lim_y: 3
+  min_vel_y: 0.01
+  acc_lim_y: 2
 
   # goal tolerance
-  yaw_goal_tolerance: 0.2
-  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.1
+  xy_goal_tolerance: 0.02
 
   # forward simulation
   sim_time: 0.5
   vx_samples: 4
   vy_samples: 0
   vtheta_samples: 10
-  sim_granularity: 0.1
+  sim_granularity: 0.01
   angular_sim_granularity: 0.1
   penalize_negative_x: false
 
   # weights
   occdist_scale: 10
+  
+  holonomic_robot: true

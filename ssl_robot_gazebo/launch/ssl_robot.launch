@@ -3,6 +3,7 @@
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg name="world_name" value="$(find ssl_robot_gazebo)/worlds/ssl_robot.world"/>
 		<arg name="paused" value="false" />
+    	<arg name="gui" value="false"/>
 	</include>
 	  
 	<include file="$(find ssl_robot_gazebo)/launch/ssl_robot_spawn.launch" />
