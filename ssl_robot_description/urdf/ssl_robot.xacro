@@ -13,7 +13,7 @@
     
   <link name="base_plate">
    <inertial>
-      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
       <mass value="34.0" />
       <inertia ixx="0.15500" ixy="0" ixz="0" iyy="0.15500" iyz="0" izz="0.12250" />
    </inertial>
