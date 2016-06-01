@@ -1,20 +1,23 @@
 controller_frequency: 10
-recovery_behaviour_enabled: true
+recovery_behaviour_enabled: false
 
-DWAPlannerROS:
+#DWAPlannerROS:
+TrajectoryPlannerROS:
   max_vel_x: 3
   min_vel_x: -3
-  max_rotational_vel: 10
-  min_vel_theta: -10
-  min_in_place_vel_theta: 0.2
+  max_rotational_vel: 1
+  min_rotational_vel: -1
+  max_vel_theta: 1
+  min_vel_theta: -1
+  min_in_place_vel_theta: 0.1
   escape_vel: -0.1
   acc_lim_x: 3
-  acc_lim_y: 3
-  acc_lim_theta: 10
+  acc_lim_y: 2
+  acc_lim_theta: 30
 
   holonomic_robot: true
-  yaw_goal_tolerance: 0.1 # about 6 degrees
-  xy_goal_tolerance: 0.1
+  yaw_goal_tolerance: 0.3
+  xy_goal_tolerance: 0.2
   latch_xy_goal_tolerance: false
   pdist_scale: 0.8
   gdist_scale: 0.6
@@ -22,19 +25,19 @@ DWAPlannerROS:
   prefer_forward_cost_function: 0.0
 
   # forward simulation
-  sim_time: 0.5
-  vx_samples: 4
-  vy_samples: 0
+  sim_time: 1
+  vx_samples: 10
+  vy_samples: 10
   vtheta_samples: 10
-  sim_granularity: 0.01
-  angular_sim_granularity: 0.1
+  sim_granularity: 0.1
+  angular_sim_granularity: 0.2
   penalize_negative_x: false
 
   # weights
   occdist_scale: 10
-  
-  holonomic_robot: true
-  
+    
   dwa: true
   simple_attractor: false
+  
+  
   
