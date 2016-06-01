@@ -2,8 +2,7 @@
 	<arg name="learner" default="" />
 	<param name="learner" value="$(arg learner)" />
 	
-	<arg name="reset" default="" />
-	<param name="reset" value="$(arg reset)" />
+	<param name="configFolder" value="$(find ssl_robot_affw)/config" />
 
 	<node name="ssl_robot_affw" pkg="ssl_robot_affw" type="ssl_robot_affw" output="screen" />
 	<node name="affw_ctrl" pkg="affw_ctrl" type="affw_ctrl" output="screen" />

@@ -30,21 +30,45 @@ ros::Publisher pub_fdbk_state;
 ros::ServiceClient srv_action;
 ros::Time lastSetVelTime;
 
+double normalizeAngle(double angle)
+{
+	// Don't call this a hack! It's numeric!
+	return (angle - (round((angle / (M_PI*2)) - 1e-8) * M_PI*2));
+}
+
+double angleOfVector(double x, double y)
+{
+	double angle = normalizeAngle( acos(x / (sqrt( x*x + y*y ))) );
+	if(x<0) angle = -angle;
+	return angle;
+}
+
 void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 
 	lastSetVelTime = ros::Time::now();
 
 	affw_msgs::ActionRequest srv;
-	srv.request.header = vel->header;
-	srv.request.setPoint.push_back(vel->twist.linear.x);
-	srv.request.setPoint.push_back(vel->twist.linear.y);
-	srv.request.setPoint.push_back(vel->twist.angular.z);
+	srv.request.state.header = vel->header;
+//	srv.request.setPoint.push_back(vel->twist.linear.x);
+//	srv.request.setPoint.push_back(vel->twist.linear.y);
+
+	double x = vel->twist.linear.x;
+	double y = vel->twist.linear.y;
+	double len = sqrt(x*x+y*y);
+	srv.request.state.vel.push_back(len);
+
+	srv.request.state.vel.push_back(vel->twist.angular.z);
+
 
 	if (srv_action.call(srv)) {
 		geometry_msgs::Twist outVel;
-		outVel.linear.x = srv.response.outVel[0];
-		outVel.linear.y = srv.response.outVel[1];
-		outVel.angular.z = srv.response.outVel[2];
+//		outVel.linear.x = srv.response.outVel[0];
+//		outVel.linear.y = srv.response.outVel[1];
+
+		outVel.linear.x = x/len * srv.response.outVel[0];
+		outVel.linear.y = y/len * srv.response.outVel[0];
+
+		outVel.angular.z = srv.response.outVel[1];
 
 		pub_set_vel.publish(outVel);
 		ros::spinOnce();
@@ -55,15 +79,23 @@ void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 
 void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& odom) {
 
-	tf::Quaternion fromQuat;
-	tf::quaternionMsgToTF(odom->pose.pose.orientation, fromQuat);
-	double angle = -fromQuat.getAngle();
-	geometry_msgs::Vector3 velIn = odom->twist.twist.linear;
+	if(odom->header.frame_id != "odom")
+	{
+		ROS_ERROR("invalid frame_id");
+	}
+
 	affw_msgs::State state;
 	state.header = odom->header;
 	state.header.frame_id = "base_link";
-	state.vel.push_back(velIn.x * cos(angle) - velIn.y * sin(angle));
-	state.vel.push_back(velIn.x * sin(angle) + velIn.y * cos(angle));
+
+//	state.vel.push_back(odom->twist.twist.linear.x);
+//	state.vel.push_back(odom->twist.twist.linear.y);
+
+	double x = odom->twist.twist.linear.x;
+	double y = odom->twist.twist.linear.y;
+	double len = sqrt(x*x+y*y);
+	state.vel.push_back(len);
+
 	state.vel.push_back(odom->twist.twist.angular.z);
 
 	pub_fdbk_state.publish(state);
@@ -87,6 +119,10 @@ int main(int argc, char **argv) {
 
 	lastSetVelTime = ros::Time::now();
 
+	// unreliable transport
+	ros::TransportHints th;
+	th.unreliable();
+
 	// send velocity to robot
 	pub_set_vel = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
 
@@ -95,11 +131,11 @@ int main(int argc, char **argv) {
 
 	// receive velocity cmd from external source
 	ros::Subscriber sub_set_vel = n.subscribe("/affw_ctrl/target_vel", 1,
-			setVelCallback);
+			setVelCallback, th);
 
 	// receive robot state from robot
 	ros::Subscriber sub_fdbk_vel = n.subscribe("/odom", 1,
-			feedbackVelCallback);
+			feedbackVelCallback, th);
 
 	srv_action = n.serviceClient<affw_msgs::ActionRequest>("/affw_ctrl/action");
 
