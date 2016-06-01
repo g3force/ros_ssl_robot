@@ -24,3 +24,6 @@ catkin_package(
 
 add_executable(ssl_robot_vision_sumatra src/ssl_robot_vision_sumatra.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(ssl_robot_vision_sumatra ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES})
+
+add_executable(test_delay src/test_delay.cpp)
+target_link_libraries(test_delay ${catkin_LIBRARIES})

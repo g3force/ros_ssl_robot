@@ -82,19 +82,19 @@ int main(int argc, char **argv)
 
 	ros::spin();
 
-	RadioProtocolWrapper wrapper;
-	RadioProtocolCommand command;
-	std::string buffer;
+//	RadioProtocolWrapper wrapper;
+//	RadioProtocolCommand command;
+//	std::string buffer;
 
-	FillCommandProtobuf(robot_id, 0, 0, 0, &command);
-	*wrapper.add_command() = command;
-	wrapper.SerializeToString(&buffer);
-	sendto(socket_fd,
-	   buffer.data(),
-	   buffer.length(),
-	   0,
-	   reinterpret_cast<sockaddr*>(&server_address),
-	   sizeof(server_address));
+//	FillCommandProtobuf(robot_id, 0, 0, 0, &command);
+//	*wrapper.add_command() = command;
+//	wrapper.SerializeToString(&buffer);
+//	sendto(socket_fd,
+//	   buffer.data(),
+//	   buffer.length(),
+//	   0,
+//	   reinterpret_cast<sockaddr*>(&server_address),
+//	   sizeof(server_address));
 
 	return 0;
 }

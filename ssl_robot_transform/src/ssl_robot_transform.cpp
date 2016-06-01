@@ -34,7 +34,7 @@ void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 		return;
 	}
 
-	double angle = -getOrientation(odo->pose.pose.orientation);
+	double angle = -(getOrientation(odo->pose.pose.orientation));
 	geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(angle);
 
 	geometry_msgs::TransformStamped odom_trans;
@@ -77,8 +77,10 @@ int main(int argc, char **argv) {
 	ros::NodeHandle n;
 
 	odom_broadcaster = new tf::TransformBroadcaster;
-	ros::Subscriber sub_odom = n.subscribe("state", 10,	callbackOdom);
-	pub_odom = n.advertise<nav_msgs::Odometry>("odom", 10);
+	ros::TransportHints th;
+	th.unreliable();
+	ros::Subscriber sub_odom = n.subscribe("state", 1,	callbackOdom, th);
+	pub_odom = n.advertise<nav_msgs::Odometry>("odom", 1);
 
 	ros::spin();
 

@@ -27,3 +27,8 @@ roslaunch ssl_robot_affw trajectory_real.launch
 
 
 
+
+roslaunch hector_gazebo_worlds start.launch
+roslaunch hector_tracker_sim_launch spawn_tracker_with_ground_truth.launch
+
+/move_base/simple_goal

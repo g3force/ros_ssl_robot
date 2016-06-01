@@ -91,6 +91,7 @@ static void onPacketReceived(char* data, size_t dataSize)
                 	odom.twist.twist.angular.z = bot.vel().z();
 
                     pub_state.publish(odom);
+                    ros::spinOnce();
                     break;
                 }
             }
@@ -100,39 +101,45 @@ static void onPacketReceived(char* data, size_t dataSize)
 		ROS_ERROR_STREAM("Exception in onPacketReceived: " << e.what());
 	}
 }
+void mySigintHandler(int sig)
+{
+	io_service.stop();
+	if(recv_thread != NULL) {
+		delete recv_thread;
+		recv_thread = NULL;
+	}
+
+	// All the default sigint handler does is call shutdown()
+	ros::shutdown();
+}
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "sumatra_wf_receiver");
-  
-  ros::NodeHandle n;
-  pub_state = n.advertise<nav_msgs::Odometry>("/state", 1);
+	ros::init(argc, argv, "sumatra_wf_receiver");
 
-  ros::param::param<int>("robot_id", robot_id, 0);
-  ros::param::param<std::string>("robot_team_color", robot_team_color, "Y");
-  
-  std::string netIp = "0.0.0.0";
+	ros::NodeHandle n;
+	pub_state = n.advertise<nav_msgs::Odometry>("/state", 1);
 
-  // Create the socket so that multiple may be bound to the same address.
+	ros::param::param<int>("robot_id", robot_id, 8);
+	ros::param::param<std::string>("robot_team_color", robot_team_color, "Y");
+
+	std::string netIp = "0.0.0.0";
+
+	// Create the socket so that multiple may be bound to the same address.
 	boost::asio::ip::udp::endpoint listen_endpoint(boost::asio::ip::address::from_string(netIp),
-			PORT);
+		PORT);
 	m_socket.open(listen_endpoint.protocol());
 	m_socket.set_option(boost::asio::ip::udp::socket::reuse_address(true));
 	m_socket.bind(listen_endpoint);
 
 	// Join the multicast group.
 	m_socket.set_option(
-			boost::asio::ip::multicast::join_group(boost::asio::ip::address::from_string(MULTICAST_IP)));
+		boost::asio::ip::multicast::join_group(boost::asio::ip::address::from_string(MULTICAST_IP)));
+
+	signal(SIGINT, mySigintHandler);
 
 	recv_thread = new boost::thread(boost::bind(&run));
+	ros::spin();
 
-  ros::spin();
-  
-  io_service.stop();
-	if(recv_thread != NULL) {
-		delete recv_thread;
-		recv_thread = NULL;
-	}
-
-  return 0;
+	return 0;
 }
