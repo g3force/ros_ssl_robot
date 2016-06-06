@@ -65,8 +65,11 @@ void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 //		outVel.linear.x = srv.response.outVel[0];
 //		outVel.linear.y = srv.response.outVel[1];
 
-		outVel.linear.x = x/len * srv.response.outVel[0];
-		outVel.linear.y = y/len * srv.response.outVel[0];
+		if(len > 0)
+		{
+			outVel.linear.x = x/len * srv.response.outVel[0];
+			outVel.linear.y = y/len * srv.response.outVel[0];
+		}
 
 		outVel.angular.z = srv.response.outVel[1];
 
