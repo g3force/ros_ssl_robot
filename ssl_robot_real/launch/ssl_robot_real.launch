@@ -1,13 +1,26 @@
 <launch>
 	<node name="ssl_robot_shared_radio" pkg="ssl_robot_shared_radio" type="vel_xyw2SharedRadio" output="screen" />
     
+    <arg name="id" default="3" />
+    <arg name="ip" default="192.168.20.210" />
+    
 	<param name="use_sim_time" value="false" />
-	<param name="robot_id" value="8" />
+	<param name="robot_id" value="$(arg id)" />
 	<param name="robot_team_color" value="Y" />
-	<param name="server_name" value="192.168.20.210" />
-	<!--<param name="server_name" value="127.0.0.1" />-->
-    <node name="ssl_robot_vision_sumatra" pkg="ssl_robot_vision_sumatra" type="ssl_robot_vision_sumatra" output="screen" />
+	<param name="server_name" value="$(arg ip)" /> <!-- 127.0.0.1, 192.168.20.210 -->
 	
 	<!-- transformation from map frame to local frame -->
 	<node name="ssl_robot_transform" pkg="ssl_robot_transform" type="ssl_robot_transform" />
+
+<!--
+    <node name="ssl_robot_vision_sumatra" pkg="ssl_robot_vision_sumatra" type="ssl_robot_vision_sumatra" output="screen" />
+-->
+
+    <node name="ssl_robot_vision" pkg="ssl_robot_vision" type="ssl_robot_vision" output="screen" />
+	
+	<param name="state_topic" value="/vision/state" />
+	<node name="affw_pos2vel" pkg="affw_pos2vel" type="affw_pos2vel" output="screen">
+	</node>
+
+	
 </launch>
