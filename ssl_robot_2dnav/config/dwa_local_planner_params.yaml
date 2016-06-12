@@ -9,10 +9,10 @@ TrajectoryPlannerROS:
   min_rotational_vel: -1
   max_vel_theta: 1
   min_vel_theta: -1
-  min_in_place_vel_theta: 0.1
+  min_in_place_vel_theta: 0.01
   escape_vel: -0.1
   acc_lim_x: 3
-  acc_lim_y: 2
+  acc_lim_y: 3
   acc_lim_theta: 30
 
   holonomic_robot: true
@@ -25,12 +25,12 @@ TrajectoryPlannerROS:
   prefer_forward_cost_function: 0.0
 
   # forward simulation
-  sim_time: 1
+  sim_time: 1.0
   vx_samples: 10
   vy_samples: 10
   vtheta_samples: 10
   sim_granularity: 0.1
-  angular_sim_granularity: 0.2
+  angular_sim_granularity: 0.1
   penalize_negative_x: false
 
   # weights
