@@ -49,29 +49,28 @@ void setVelCallback(const geometry_msgs::TwistStamped::ConstPtr& vel) {
 
 	affw_msgs::ActionRequest srv;
 	srv.request.state.header = vel->header;
-//	srv.request.setPoint.push_back(vel->twist.linear.x);
-//	srv.request.setPoint.push_back(vel->twist.linear.y);
+	srv.request.state.vel.push_back(vel->twist.linear.x);
+	srv.request.state.vel.push_back(vel->twist.linear.y);
 
-	double x = vel->twist.linear.x;
-	double y = vel->twist.linear.y;
-	double len = sqrt(x*x+y*y);
-	srv.request.state.vel.push_back(len);
+//	double x = vel->twist.linear.x;
+//	double y = vel->twist.linear.y;
+//	double len = sqrt(x*x+y*y);
+//	srv.request.state.vel.push_back(len);
 
 	srv.request.state.vel.push_back(vel->twist.angular.z);
 
-
 	if (srv_action.call(srv)) {
 		geometry_msgs::Twist outVel;
-//		outVel.linear.x = srv.response.outVel[0];
-//		outVel.linear.y = srv.response.outVel[1];
+		outVel.linear.x = srv.response.outVel[0];
+		outVel.linear.y = srv.response.outVel[1];
+		outVel.angular.z = srv.response.outVel[2];
 
-		if(len > 0)
-		{
-			outVel.linear.x = x/len * srv.response.outVel[0];
-			outVel.linear.y = y/len * srv.response.outVel[0];
-		}
-
-		outVel.angular.z = srv.response.outVel[1];
+//		if(len > 0)
+//		{
+//			outVel.linear.x = x/len * srv.response.outVel[0];
+//			outVel.linear.y = y/len * srv.response.outVel[0];
+//		}
+//		outVel.angular.z = srv.response.outVel[1];
 
 		pub_set_vel.publish(outVel);
 		ros::spinOnce();
@@ -91,13 +90,13 @@ void feedbackVelCallback(const nav_msgs::Odometry::ConstPtr& odom) {
 	state.header = odom->header;
 	state.header.frame_id = "base_link";
 
-//	state.vel.push_back(odom->twist.twist.linear.x);
-//	state.vel.push_back(odom->twist.twist.linear.y);
+	state.vel.push_back(odom->twist.twist.linear.x);
+	state.vel.push_back(odom->twist.twist.linear.y);
 
-	double x = odom->twist.twist.linear.x;
-	double y = odom->twist.twist.linear.y;
-	double len = sqrt(x*x+y*y);
-	state.vel.push_back(len);
+//	double x = odom->twist.twist.linear.x;
+//	double y = odom->twist.twist.linear.y;
+//	double len = sqrt(x*x+y*y);
+//	state.vel.push_back(len);
 
 	state.vel.push_back(odom->twist.twist.angular.z);
 
