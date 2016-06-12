@@ -60,15 +60,22 @@ int main(int argc, char **argv) {
 	ros::init(argc, argv, "test_delay");
 
 	int nFrames = 1000;
+	const char* topic = "";
 	if(argc > 1)
 	{
-		nFrames = atoi(argv[1]);
+		topic = argv[1];
+	} else {
+		return 1;
+	}
+	if(argc > 2)
+	{
+		nFrames = atoi(argv[2]);
 	}
 
 	ros::NodeHandle n;
 	ros::TransportHints th;
 	th.unreliable();
-	ros::Subscriber sub = n.subscribe("odom", 1, callback, th);
+	ros::Subscriber sub = n.subscribe(topic, 1, callback, th);
 
 	delays = new boost::circular_buffer<double>(nFrames);
 	signal(SIGINT, mySigintHandler);
