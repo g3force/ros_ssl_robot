@@ -11,6 +11,7 @@
 
 tf::TransformBroadcaster* odom_broadcaster;
 ros::Publisher pub_odom;
+nav_msgs::Odometry lastOdom;
 
 
 double getOrientation(geometry_msgs::Quaternion gq) {
@@ -26,6 +27,12 @@ double getOrientation(geometry_msgs::Quaternion gq) {
 	return yaw;
 }
 
+double normalizeAngle(double angle)
+{
+	// Don't call this a hack! It's numeric!
+	return (angle - (round((angle / (M_PI*2)) - 1e-8) * M_PI*2));
+}
+
 void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 
 	if(odo->header.frame_id != "map")
@@ -34,7 +41,9 @@ void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 		return;
 	}
 
-	double angle = -(getOrientation(odo->pose.pose.orientation));
+	double angleDiff = normalizeAngle(getOrientation(odo->pose.pose.orientation) - getOrientation(lastOdom.pose.pose.orientation));
+
+	double angle = -(getOrientation(odo->pose.pose.orientation)) + angleDiff;
 	geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(angle);
 
 	geometry_msgs::TransformStamped odom_trans;
@@ -67,6 +76,8 @@ void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 	odom.twist.twist.angular.z = odo->twist.twist.angular.z;
 
 	pub_odom.publish(odom);
+
+	lastOdom = *odo;
 
 	ros::spinOnce();
 }
