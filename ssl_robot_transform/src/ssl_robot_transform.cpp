@@ -12,6 +12,7 @@
 tf::TransformBroadcaster* odom_broadcaster;
 ros::Publisher pub_odom;
 nav_msgs::Odometry lastOdom;
+bool first = true;
 
 
 double getOrientation(geometry_msgs::Quaternion gq) {
@@ -41,9 +42,13 @@ void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 		return;
 	}
 
-	double angleDiff = normalizeAngle(getOrientation(odo->pose.pose.orientation) - getOrientation(lastOdom.pose.pose.orientation));
+	if(first)
+	{
+		first = false;
+		lastOdom = *odo;
+	}
 
-	double angle = -(getOrientation(odo->pose.pose.orientation)) + angleDiff;
+	double angle = -(getOrientation(lastOdom.pose.pose.orientation));
 	geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(angle);
 
 	geometry_msgs::TransformStamped odom_trans;
@@ -61,8 +66,8 @@ void callbackOdom(const nav_msgs::Odometry::ConstPtr& odo) {
 
 	geometry_msgs::TransformStamped base_trans;
 	base_trans.header.stamp = odo->header.stamp;
-	base_trans.header.frame_id = "odom";
-	base_trans.child_frame_id = "base_link";
+	base_trans.header.frame_id = "base_link";
+	base_trans.child_frame_id = "odom";
 	base_trans.transform.rotation = tf::createQuaternionMsgFromYaw(0);
 	odom_broadcaster->sendTransform(base_trans);
 
@@ -87,11 +92,14 @@ int main(int argc, char **argv) {
 
 	ros::NodeHandle n;
 
+	std::string odom_topic = "odom";
+	ros::param::get("odom_topic", odom_topic);
+
 	odom_broadcaster = new tf::TransformBroadcaster;
 	ros::TransportHints th;
 	th.unreliable();
 	ros::Subscriber sub_odom = n.subscribe("state", 1,	callbackOdom, th);
-	pub_odom = n.advertise<nav_msgs::Odometry>("odom", 1);
+	pub_odom = n.advertise<nav_msgs::Odometry>(odom_topic, 1);
 
 	ros::spin();
 

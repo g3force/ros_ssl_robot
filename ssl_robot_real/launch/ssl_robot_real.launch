@@ -12,15 +12,20 @@
 	<!-- transformation from map frame to local frame -->
 	<node name="ssl_robot_transform" pkg="ssl_robot_transform" type="ssl_robot_transform" />
 
+    <node name="ssl_robot_vision_sumatra" pkg="ssl_robot_vision_sumatra" type="ssl_robot_vision_sumatra" output="screen">
+    	<remap from="/sumatra/state" to="/state" />
+    </node>
+	<!--<param name="state_topic" value="/sumatra/state" />-->
+
 <!--
-    <node name="ssl_robot_vision_sumatra" pkg="ssl_robot_vision_sumatra" type="ssl_robot_vision_sumatra" output="screen" />
--->
-
     <node name="ssl_robot_vision" pkg="ssl_robot_vision" type="ssl_robot_vision" output="screen" />
-	
 	<param name="state_topic" value="/vision/state" />
-	<node name="affw_pos2vel" pkg="affw_pos2vel" type="affw_pos2vel" output="screen">
-	</node>
-
+	<node name="affw_pos2vel" pkg="affw_pos2vel" type="affw_pos2vel" output="screen" />
+-->
 	
+
+<!--
+	<param name="odom_topic" value="/odom/raw" />
+  	<include file="$(find ssl_robot_filter)/launch/filter-ukf.launch" />
+-->
 </launch>

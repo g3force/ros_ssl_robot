@@ -118,7 +118,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "sumatra_wf_receiver");
 
 	ros::NodeHandle n;
-	pub_state = n.advertise<nav_msgs::Odometry>("/state", 1);
+	pub_state = n.advertise<nav_msgs::Odometry>("/sumatra/state", 1);
 
 	ros::param::param<int>("robot_id", robot_id, 8);
 	ros::param::param<std::string>("robot_team_color", robot_team_color, "Y");
