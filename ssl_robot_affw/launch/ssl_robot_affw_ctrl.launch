@@ -1,9 +1,14 @@
 <launch>
 	<arg name="learner" default="" />
-	<param name="learner" value="$(arg learner)" />
+	<arg name="custom_params" default="" />
 	
+	<param name="learner" value="$(arg learner)" />
+	<param name="custom_params" value="$(arg custom_params)" />
 	<param name="configFolder" value="$(find ssl_robot_affw)/config" />
 
+	<!-- start affw controller nodes -->
+	<param name="state_topic" value="/odom" />
+	<param name="cmd_vel_topic" value="/cmd_vel" />
 	<node name="ssl_robot_affw" pkg="ssl_robot_affw" type="ssl_robot_affw" output="screen" />
 	<node name="affw_ctrl" pkg="affw_ctrl" type="affw_ctrl" output="screen" />
 </launch>
