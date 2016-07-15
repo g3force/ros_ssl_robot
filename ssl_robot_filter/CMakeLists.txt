@@ -23,3 +23,6 @@ target_link_libraries(ssl_robot_feedback_gaz ${catkin_LIBRARIES} AngleMath)
 
 add_executable(ssl_robot_feedback_gaz_p3d src/ssl_robot_feedback_gaz_p3d.cpp)
 target_link_libraries(ssl_robot_feedback_gaz_p3d ${catkin_LIBRARIES} AngleMath)
+
+add_executable(pose_add_cov src/pose_add_cov.cpp)
+target_link_libraries(pose_add_cov ${catkin_LIBRARIES})
