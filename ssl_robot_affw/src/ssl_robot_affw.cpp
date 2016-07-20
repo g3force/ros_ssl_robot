@@ -122,9 +122,9 @@ int main(int argc, char **argv) {
 	lastSetVelTime = ros::Time::now();
 
 	std::string cmd_vel_topic = "/cmd_vel";
-	std::string state_topic = "/odom";
+	std::string local_state_topic = "/odom";
 	ros::param::get("cmd_vel_topic", cmd_vel_topic);
-	ros::param::get("state_topic", state_topic);
+	ros::param::get("local_state_topic", local_state_topic);
 
 	// unreliable transport
 	ros::TransportHints th;
@@ -141,7 +141,7 @@ int main(int argc, char **argv) {
 			setVelCallback, th);
 
 	// receive robot state from robot
-	ros::Subscriber sub_fdbk_vel = n.subscribe(state_topic, 1,
+	ros::Subscriber sub_fdbk_vel = n.subscribe(local_state_topic, 1,
 			feedbackVelCallback, th);
 
 	srv_action = n.serviceClient<affw_msgs::ActionRequest>("/affw_ctrl/action");

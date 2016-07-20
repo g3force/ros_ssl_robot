@@ -1,15 +1,10 @@
 <launch>
-	<arg name="learner" />
+	<arg name="learner" default="none" />
 	<arg name="params" default="" />
 
-	<include file="$(find affw_traj)/launch/trajectory.launch">
-	    <arg name="nIt" value="5" />
-	    <arg name="nEIt" value="1" />
-	    <arg name="useInitPos" value="false" />
-	    <arg name="export" value="true" />
-	</include>
+	<include file="$(find ssl_robot_affw)/launch/ssl_robot_traj.launch" />
 	
-	<include file="$(find ssl_robot_affw)/launch/ssl_robot_affw.launch">
+	<include file="$(find ssl_robot_affw)/launch/ssl_robot_affw_ctrl.launch">
 		<arg name="learner" value="$(arg learner)" />
 		<arg name="custom_params" value="$(arg params)" />
 	</include>
