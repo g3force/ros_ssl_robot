@@ -14,7 +14,7 @@
 
 double normalizeAngle(double angle) {
 	// Don't call this a hack! It's numeric!
-	return (angle - (round((angle / (M_PI_2)) - 1e-6) * M_PI_2));
+	return (angle - (round((angle / (M_PI*2)) - 1e-6) * M_PI*2));
 }
 
 double angleDiff(double angle1, double angle2) {
