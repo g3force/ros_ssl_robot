@@ -2,7 +2,15 @@
 	<arg name="learner" default="none" />
 	<arg name="params" default="" />
 
-	<include file="$(find ssl_robot_affw)/launch/ssl_robot_traj.launch" />
+    <arg name="nIt" default="5" />
+    <arg name="nEIt" default="2" />
+    <arg name="useInitPos" default="true" />  
+    
+	<include file="$(find ssl_robot_affw)/launch/ssl_robot_traj.launch">
+		<arg name="nIt" value="$(arg nIt)" />
+		<arg name="nEIt" value="$(arg nEIt)" />
+		<arg name="useInitPos" value="$(arg useInitPos)" />
+	</include>
 	
 	<include file="$(find ssl_robot_affw)/launch/ssl_robot_affw_ctrl.launch">
 		<arg name="learner" value="$(arg learner)" />

@@ -16,6 +16,7 @@
 	<param name="rotateMin" value="0.5" />
 	<param name="rotateAcc" value="30" />
 	<param name="affw" value="$(arg affw)" />
+	<param name="cmd_vel_topic" value="cmd_vel" />
 	<param name="angularAxis" value="3" />
 	<node name="affw_joy" pkg="affw_joy" type="joy2vel" output="screen" />
 </launch>
